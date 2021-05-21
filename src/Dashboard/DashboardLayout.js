@@ -1,12 +1,17 @@
+//------------------------------------------- packages -------------------------------------------//
 import React from 'react'
-import NavBar from '../Shared/NavBar'
+import MainMenu from '../Shared/MainMenu'
+//------------------------------------------ components ------------------------------------------//
 
+//-------------------------------------------- styles --------------------------------------------//
+
+//--------------------------------------- dashboard layout ---------------------------------------//
 const DashboardLayout = () => {
     return (
         <div>
             <h1>Dashboard Page</h1>
             {/* Logo top left corner */}
-            <NavBar/>
+            <MainMenu />
             {/* Summary tile */}
             {/* tiles tbd */} 
         </div>
