@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AccountDeleteButton from './AccountDelete/AccountDeleteButton'
-import AccountDeleteForm from './AccountDelete/AccountDeleteForm'
+import AccountDelete from './AccountDelete/AccountDelete'
 import AccountEditButton from './AccountEdit/AccountEditButton'
 import AccountEditForm from './AccountEdit/AccountEditForm'
 
@@ -20,12 +20,11 @@ const AccountSettings = () => {
 
     return (
         <div>
-            {/* edit button */}
             <AccountEditButton edit={edi} />
             {edit? <AccountEditForm />: null}
-            {/* delete button */}
+
             <AccountDeleteButton destroy={deli}/>
-            {destroy? <AccountDeleteForm /> : null}
+            {destroy? <AccountDelete destroy={deli}/> : null}
         </div>
     )
 }

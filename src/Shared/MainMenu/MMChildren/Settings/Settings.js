@@ -20,14 +20,12 @@ const Settings = () => {
     }
     return (
         <div>
-            settings div
-            {/* account settings button */}
             <AccountSettingsButton settings={acct}/>
             {account? <AccountSettings/> : null}
-            {/* group settings button */}
+    
             <GroupSettingsButton settings={grou}/>
             {group? <GroupSettings/> : null }
-            {/* logout button */}
+          
             <LogOutButton />
         </div>
     )
