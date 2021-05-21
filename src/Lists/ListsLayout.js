@@ -1,7 +1,7 @@
 //------------------------------------------- packages -------------------------------------------//
 import React from 'react'
 //------------------------------------------ components ------------------------------------------//
-import MainMenu from '../Shared/MainMenu.js'
+import MainMenu from '../Shared/MainMenu/MainMenu.js'
 import ListsIndex from './ListsIndex.js'
 import ListView from './ListView.js'
 //-------------------------------------------- styles --------------------------------------------//
