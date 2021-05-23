@@ -1,9 +1,9 @@
 import { fetchUserRequest,fetchUserSuccess,fetchUserFailure} from '../actions/userActions'
-import {isLoggedIn} from '../actions/isLoggedActions'
+import loggedStatus from '../actions/auth/loggedStatus'
 
 const initialState = {
     loading: false,
-    currentUser: {},
+    currentUser: null,
     error: ''
 }
 
@@ -33,7 +33,7 @@ export const signUpUser = (log) => (dispatch)=>{
     .then(data=>{
         dispatch(fetchUserRequest())
         dispatch(fetchUserSuccess(data.user))
-        dispatch(isLoggedIn())
+        dispatch(loggedStatus(true))
         localStorage.setItem('token', data.jwt)
     })
     .catch(error=>{
@@ -52,7 +52,6 @@ export const logInUser = (log) => (dispatch) => {
     .then(data=>{
         dispatch(fetchUserRequest())
         dispatch(fetchUserSuccess(data.user))
-        dispatch(isLoggedIn())
         localStorage.setItem('token', data.jwt)
     })
     .catch(error=>{
@@ -61,6 +60,7 @@ export const logInUser = (log) => (dispatch) => {
 }
 
 export const loadUser = () => async (dispatch) => {
+    // const {currentUser} = useSelector(state=>state.currentUserState)
 
     const req={
         method: 'GET',
@@ -70,17 +70,32 @@ export const loadUser = () => async (dispatch) => {
             'Authorization': `Bearer ${localStorage.getItem("token")}`
         }
     }
-
     await fetch('http://localhost:3000/api/v1/loggedin',req)
     .then(res=>res.json())
     .then(data=>{
         dispatch(fetchUserRequest())
         dispatch(fetchUserSuccess(data.user))
-        dispatch(isLoggedIn())
     })
     .catch(error=>{
         dispatch(fetchUserFailure(error.message))
     })
+    
+}
+
+export const deleteUser = () => async (dispatch) => {
+
+    const req={
+        method: 'DELETE',
+        headers: {
+            'Content-Type':'application/json',
+            'Accept':'application/json', 
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
+        }
+    }
+    await fetch('http://localhost:3000/api/v1/terminate',req)
+    .then(dispatch(loggedStatus(false)))
+    
+    
 }
 
 export default currentUserReducer

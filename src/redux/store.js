@@ -1,16 +1,20 @@
 import {combineReducers, createStore, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 
+import authReducer from './reducers/authReducer'
 import currentUserReducer from './reducers/currentUserReducer'
-import isLoggedReducer from './reducers/isLoggedReducer'
+// import isLoggedReducer from './reducers/isLoggedReducer'
 import groupReducer from './reducers/groupReducer'
 import listsReducer from './reducers/listsReducer'
 import calanderReducer from './reducers/calanderReducer'
 import selectedListReducer from './reducers/selectedListReducer'
+// import tokenReducer from './reducers/TokenReducer'
 
 const rootReducer = combineReducers({
+    authState: authReducer,
     currentUserState: currentUserReducer,
-    isLoggedState: isLoggedReducer,
+    // tokenState: tokenReducer,
+    // isLoggedState: isLoggedReducer,
     groupState: groupReducer,
     listsState: listsReducer,
     calanderState: calanderReducer,

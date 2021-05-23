@@ -1,17 +1,34 @@
 import { fetchListsRequest,fetchListsSuccess,fetchListsFailure} from '../actions/listsActions'
 
-const initialState = { loading: false, lists: [], error: ''}
+const initialState = { 
+    loading: false,
+    lists: [],
+    error: ''
+}
 
 const listsReducer = (state=initialState, action)=>{
     switch(action.type){
         case 'FETCH_LISTS_REQUEST':
-            return{ ...state , loading: true }
+            return{ 
+                ...state,
+                 loading: true 
+            }
 
         case 'FETCH_LISTS_SUCCESS':
-            return{ ...state, loading: false, lists: action.lists, error: ''}
+            return{ 
+                ...state,
+                loading: false,
+                lists: action.lists,
+                error: ''
+            }
 
         case 'FETCH_LISTS_FAILURE':
-            return{ ...state, loading: false, lists: [], error: action.error } 
+            return{ 
+                ...state,
+                loading: false,
+                lists: [],
+                error: action.error 
+            } 
         
         default: 
             return state 

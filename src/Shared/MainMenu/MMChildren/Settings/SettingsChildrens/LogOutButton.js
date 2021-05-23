@@ -1,14 +1,14 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
 
-import {isLoggedOut} from '../../../../../redux/actions/isLoggedActions'
+import loggedStatus from '../../../../../redux/actions/auth/loggedStatus'
 
 const LogOutButton = () => {
 
     const dispatch = useDispatch()
 
     const logOut = () => {
-        dispatch(isLoggedOut())
+        dispatch(loggedStatus(false))
         localStorage.clear()
     }
 
