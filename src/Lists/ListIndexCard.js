@@ -1,5 +1,5 @@
 import {useDispatch} from 'react-redux'
-import {selectList} from "../redux/actions/selectedListAction"
+import {selectList} from "../redux/actions/Lists/selectedList/selectList"
 
 const ListIndexCard = ({list}) =>{
     const dispatch = useDispatch()

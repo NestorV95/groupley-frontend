@@ -1,9 +1,8 @@
-import { fetchListsRequest,fetchListsSuccess,fetchListsFailure} from '../actions/listsActions'
-
 const initialState = { 
     loading: false,
     lists: [],
-    error: ''
+    error: '',
+    selectedList: {}
 }
 
 const listsReducer = (state=initialState, action)=>{
@@ -33,30 +32,6 @@ const listsReducer = (state=initialState, action)=>{
         default: 
             return state 
     }
-}
-
-
-export const saveLists = () => async (getState) => {
-    const lists = getState().listsState.lists
-    const req = {
-        method: "POST",
-        headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body: JSON.stringify(lists)
-    }
-    await fetch('http://localhost:3000/api/v1/lists',req)
-    alert("Success")
-}
-
-export const loadLists = () => async (dispatch) => {
-    await fetch('http://localhost:3000/api/v1/lists')
-    .then(res=>res.json())
-    .then(data=>{
-        dispatch(fetchListsRequest())
-        dispatch(fetchListsSuccess(data))
-    })
-    .catch(error=>{
-        dispatch(fetchListsFailure(error.message))
-})
 }
 
 export default listsReducer

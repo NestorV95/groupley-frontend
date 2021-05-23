@@ -7,7 +7,7 @@ import currentUserReducer from './reducers/currentUserReducer'
 import groupReducer from './reducers/groupReducer'
 import listsReducer from './reducers/listsReducer'
 import calanderReducer from './reducers/calanderReducer'
-import selectedListReducer from './reducers/selectedListReducer'
+// import selectedListReducer from './reducers/selectedListReducer'
 // import tokenReducer from './reducers/TokenReducer'
 
 const rootReducer = combineReducers({
@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
     groupState: groupReducer,
     listsState: listsReducer,
     calanderState: calanderReducer,
-    selectedListState: selectedListReducer
+    // selectedListState: selectedListReducer
 })
 
 const store = createStore(

@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react'
 import {useSelector,useDispatch} from 'react-redux'
 
-import { loadLists } from '../redux/reducers/listsReducer'
+import loadLists  from '../redux/actions/Lists/loadLists'
 import ListIndexCard from './ListIndexCard'
 
 const ListsIndex = () => {
