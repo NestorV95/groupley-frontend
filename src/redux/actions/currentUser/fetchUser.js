@@ -1,4 +1,3 @@
-
 export const fetchUserRequest = () => {
     return{
       type: 'FETCH_USER_REQUEST'  

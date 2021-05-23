@@ -3,7 +3,7 @@ import React,{useEffect,useState} from 'react'
 import {Redirect} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux' 
 //------------------------------------------ components ------------------------------------------//
-import {logInUser} from '../redux/reducers/currentUserReducer'
+import logInUser from '../redux/actions/currentUser/loginUser'
 // import authenticate  from '../redux/actions/auth/authenticate'
 import tokenCheck from '../redux/actions/auth/tokenCheck'
 import tokenValidation from '../redux/actions/auth/tokenValidation'

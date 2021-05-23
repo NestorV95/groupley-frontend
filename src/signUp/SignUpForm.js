@@ -2,7 +2,7 @@
 import React,{useState} from 'react'
 import {useDispatch} from 'react-redux'
 //------------------------------------------ components ------------------------------------------//
-import {signUpUser} from '../redux/reducers/currentUserReducer'
+import signUpUser from '../redux/actions/currentUser/signUpUser'
 //-------------------------------------------- styles --------------------------------------------//
 
 //----------------------------------------- sign up form -----------------------------------------//

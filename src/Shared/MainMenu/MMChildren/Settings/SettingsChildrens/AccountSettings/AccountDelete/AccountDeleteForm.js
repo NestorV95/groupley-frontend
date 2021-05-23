@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { useDispatch} from 'react-redux'
 import { Redirect } from 'react-router'
-import {deleteUser} from '../../../../../../../redux/reducers/currentUserReducer'
+import deleteUser from '../../../../../../../redux/actions/currentUser/deleteUser'
 
 const AccountDeleteForm = ({cancel}) => {
     const [deleted, setDeleted] = useState(false)
