@@ -1,32 +1,32 @@
 //------------------------------------------- packages -------------------------------------------//
 import React,{useEffect} from 'react'
-import {useDispatch,useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 //------------------------------------------ components ------------------------------------------//
 import Routes from './Routes/Routes';
 import loadUser from './redux/actions/currentUser/loadUser'
-import tokenCheck from './redux/actions/auth/tokenCheck'
-import tokenValidation from './redux/actions/auth/tokenValidation'
-import loggedStatus from './redux/actions/auth/loggedStatus'
+import loadGroups from './redux/actions/groups/loadGroups'
+import {authenticated, authStatus} from './redux/actions/auth/authStatus'
+
 //-------------------------------------------- styles --------------------------------------------//
 import './App.css';
 //----------------------------------------- application ------------------------------------------//
+
 const  App = props => {
-  const {status, valid} = useSelector(state => state.authState.token)
-  const {isLogged} = useSelector(state => state.authState)
+  
   const dispatch = useDispatch()
 
+
   useEffect(() => {
-    dispatch(tokenCheck())
-    dispatch(tokenValidation())
-    if (status === true && valid === true){ dispatch( loggedStatus(true) )}
-    if ( isLogged === true ){ dispatch( loadUser() ) }
+    dispatch( authStatus()) 
+    if (authenticated === true){ dispatch( loadUser() ) }
+    if (authenticated !== null ){ dispatch( loadGroups() ) }
     // eslint-disable-next-line
   }, [])
 
   return (
 
     <div className="App">
-
+        
       {Routes(props)}
 
     </div>

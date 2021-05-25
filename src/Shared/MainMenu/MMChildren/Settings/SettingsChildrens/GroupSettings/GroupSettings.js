@@ -3,7 +3,9 @@ import React from 'react'
 const GroupSettings = () => {
     return (
         <div>
-            Just Need Group Settings Here
+            {/* create new group */}
+            {/* change group name */}
+            {/* display group code (for adding) */}
         </div>
     )
 }

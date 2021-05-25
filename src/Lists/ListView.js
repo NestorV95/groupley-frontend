@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import ListItems from './ListItems'
 
 const ListView = () =>{
-    const list = useSelector( state => state.selectedListState.selectedList)
+    const list = useSelector( state => state.listsState.selectedList)
     return(
         <div>
             {/* List title */}

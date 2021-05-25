@@ -20,6 +20,9 @@ const MainMenuNavBar = () => {
           <Link className="mm-na" to="/messages"> Messages </Link>
         </li> */}
         <li className="mm-nli">
+          <Link className="mm-na" to="/groups"> Groups </Link>
+        </li>
+        <li className="mm-nli">
           <Link className="mm-na" to="/lists"> Lists </Link>
         </li>
         {/* <li className="mm-nli">

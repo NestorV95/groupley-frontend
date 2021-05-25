@@ -2,7 +2,7 @@ const initialState = {
     loading: false,
     lists: [],
     error: '',
-    selectedList: {}
+    selectedList: null
 }
 
 const listsReducer = (state=initialState, action)=>{
@@ -28,6 +28,17 @@ const listsReducer = (state=initialState, action)=>{
                 lists: [],
                 error: action.error 
             } 
+
+        case 'SET_LISTS':
+            return{
+                ...state,
+                lists: action.lists
+            }
+        case 'SELECT_LIST':
+            return{
+                ...state, 
+                selectedList: action.list
+            }
         
         default: 
             return state 

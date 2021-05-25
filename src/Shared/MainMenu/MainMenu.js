@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import CurrentUserProfilePicture from './MMChildren/CurrentUserProfilePicture'
+import CurrentUserProfilePicture from './ProfilePicture/CurrentUserProfilePicture'
 import MainMenuNavBar from './MMChildren/MainMenuNavBar'
 import Notifications from './MMChildren/Notifications/Notifications'
 import NotificationsButton from './MMChildren/Notifications/NotificationsButton'

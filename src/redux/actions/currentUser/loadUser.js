@@ -11,9 +11,19 @@ const loadUser = () => async (dispatch) => {
     }
     await fetch('http://localhost:3000/api/v1/loggedin',req)
     .then(res=>res.json())
-    .then(data=>{
+    .then(({user})=>{
         dispatch(fetchUserRequest())
-        dispatch(fetchUserSuccess(data.user))
+
+        const loadedUser = {
+            id: user.id,
+            image: user.image,
+            email: user.email,
+            username: user.username,
+            first_name: user['first_name'],
+            last_name: user['last_name'],
+        }
+
+        dispatch(fetchUserSuccess(loadedUser))
     })
     .catch(error=>{
         dispatch(fetchUserFailure(error.message))

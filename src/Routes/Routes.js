@@ -9,6 +9,7 @@ import HomeLayout from "../Home/HomeLayout"
 import ListsLayout from "../Lists/ListsLayout"
 import LoginLayout from "../LogIn/LoginLayout"
 import SignUpLayout from "../SignUp/SignUpLayout"
+import GroupLayout from "../Group/GroupLayout"
 //-------------------------------------------- styles --------------------------------------------//
 
 //-------------------------------------------- routes  -------------------------------------------//
@@ -19,7 +20,8 @@ const Routes = props => {
             <Switch>
                 <Route exact path='/' component={HomeLayout} /> 
                 <Route exact path='/calander' component={CalanderLayout}/>
-                <Route exact path={'/dashboard'} component={DashboardLayout} />
+                <Route exact path='/dashboard' component={DashboardLayout} />
+                <Route exact path='/groups' component={GroupLayout} />
                 <Route exact path='/lists' component={ListsLayout} />
                 <Route exact path='/login' component={LoginLayout} />
                 <Route exact path='/signup' component={SignUpLayout} />

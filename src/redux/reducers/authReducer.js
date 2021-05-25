@@ -1,34 +1,35 @@
 const initialState = {
-    isLogged: false,
-    token: {
-        status: null,
-        valid: null
-    }
+    status: false,
+    // token: {
+    //     status: null,
+    //     valid: null
+    // }
 }
 
 const authReducer = (state=initialState, action)=>{
+    // const {type, status} = action
     switch(action.type){
-        case 'LOGGED_STATUS':
+        case 'AUTH_STATUS':
             return{
                 ...state,
-                isLogged: action.isLogged
+                status: action.status
             }
-        case 'TOKEN_STATUS':
-            return{
-                ...state,
-                token: {
-                    ...state.token,
-                    status: action.status
-                }
-            }
-        case 'TOKEN_VALID':
-            return{
-                ...state,
-                token: {
-                    ...state.token,
-                    valid: action.valid
-                }
-            }
+        // case 'TOKEN_STATUS':
+        //     return{
+        //         ...state,
+        //         token: {
+        //             ...state.token,
+        //             status: action.status
+        //         }
+        //     }
+        // case 'TOKEN_VALID':
+        //     return{
+        //         ...state,
+        //         token: {
+        //             ...state.token,
+        //             valid: action.valid
+        //         }
+        //     }
         default: 
             return state 
     }

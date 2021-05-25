@@ -1,4 +1,4 @@
-import loggedStatus from '../auth/loggedStatus'
+import {authStatus} from '../auth/authStatus'
 
 const deleteUser = () => async (dispatch) => {
     const req={
@@ -10,7 +10,7 @@ const deleteUser = () => async (dispatch) => {
         }
     }
     await fetch('http://localhost:3000/api/v1/terminate',req)
-    .then(dispatch(loggedStatus(false)))   
+    .then(dispatch(authStatus(false)))   
 }
 
 export default deleteUser

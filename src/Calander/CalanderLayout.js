@@ -1,5 +1,6 @@
 //------------------------------------------- packages -------------------------------------------//
 import React from 'react'
+import Logo from '../Shared/Logo'
 //------------------------------------------ components ------------------------------------------//
 import MainMenu from '../Shared/MainMenu/MainMenu'
 //-------------------------------------------- styles --------------------------------------------//
@@ -9,7 +10,7 @@ const CalanderLayout = () => {
     return (
         <div>
             <h1>Calander Page</h1>
-            {/* Logo top left corner */}
+            <Logo />
             <MainMenu />
             {/* Big interactive Calander */}
             {/* Selected day column */}

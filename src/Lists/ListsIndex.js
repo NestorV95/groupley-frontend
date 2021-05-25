@@ -1,16 +1,16 @@
-import React,{useEffect} from 'react'
-import {useSelector,useDispatch} from 'react-redux'
+import React from 'react'
+import {useSelector} from 'react-redux'
 
-import loadLists  from '../redux/actions/Lists/loadLists'
+// import loadLists  from '../redux/actions/Lists/loadLists'
 import ListIndexCard from './ListIndexCard'
 
 const ListsIndex = () => {
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
-    useEffect(()=>{
-        dispatch(loadLists())
-        // eslint-disable-next-line
-    },[])
+    // useEffect(()=>{
+    //     dispatch(loadLists())
+    //     // eslint-disable-next-line
+    // },[])
 
     const lists = useSelector( state => state.listsState.lists )
     return(

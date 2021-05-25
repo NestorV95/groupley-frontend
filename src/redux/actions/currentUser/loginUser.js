@@ -1,6 +1,8 @@
+// import {authStatus} from '../auth/authStatus'
 import { fetchUserRequest,fetchUserSuccess,fetchUserFailure} from './fetchUser'
 
-const logInUser = (log) => (dispatch) => {
+const logInUser = (log) => async (dispatch) => {
+    dispatch(fetchUserRequest())
     const req={
         method: 'POST',
         headers: {'Content-Type':'application/json','Accept':'application/json','Authorization': 'Bearer <token>'},
@@ -9,7 +11,6 @@ const logInUser = (log) => (dispatch) => {
     fetch('http://localhost:3000/api/v1/signin',req)
     .then(res=>res.json())
     .then(data=>{
-        dispatch(fetchUserRequest())
         dispatch(fetchUserSuccess(data.user))
         localStorage.setItem('token', data.jwt)
     })
