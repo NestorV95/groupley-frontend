@@ -1,8 +1,8 @@
-const selectGroup = group =>{
-    const {image, name, code, users} = group
+const selectGroup = ({id, image, name, code, users}) =>{
     return{
         type: 'SELECT_GROUP',
         group: {
+            id: id,
             image: image,
             name: name,
             code: code,

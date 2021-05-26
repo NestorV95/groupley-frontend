@@ -1,4 +1,5 @@
 import { fetchUserRequest,fetchUserSuccess,fetchUserFailure} from './fetchUser'
+import setGroups from '../groups/setGroups'
 
 const loadUser = () => async (dispatch) => {
     const req={
@@ -13,7 +14,6 @@ const loadUser = () => async (dispatch) => {
     .then(res=>res.json())
     .then(({user})=>{
         dispatch(fetchUserRequest())
-
         const loadedUser = {
             id: user.id,
             image: user.image,
@@ -22,6 +22,8 @@ const loadUser = () => async (dispatch) => {
             first_name: user['first_name'],
             last_name: user['last_name'],
         }
+        const {groups} = user
+        dispatch(setGroups(groups))
 
         dispatch(fetchUserSuccess(loadedUser))
     })
