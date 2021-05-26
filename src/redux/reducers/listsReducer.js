@@ -63,6 +63,12 @@ const listsReducer = (state=initialState, action)=>{
                 selectedList: action.list
             }
         
+        case 'DESELECT_LIST':
+            return{
+                ...state, 
+                selectedList: null
+            }
+        
         case 'ADD_TO_LISTS':
             return{
                 ...state,
@@ -74,6 +80,18 @@ const listsReducer = (state=initialState, action)=>{
             return{
                 ...state,
                 lists: state.lists.map(list=> list.id === action.list.id? action.list : list)
+            }
+        
+        case 'REMOVE_LIST':
+            console.log("3rd", state.lists, action.list)
+            const newLists = state.lists.filter(eList=> eList.id !== action.list.id)
+            console.log("4th", newLists)
+            return{
+                ...state,
+                loading: false,
+                lists: newLists,
+                error: "",
+                selectedList: null
             }
         
         default: 

@@ -1,27 +1,35 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
-import {FaPencilAlt} from 'react-icons/fa'
+import { useDispatch, useSelector } from 'react-redux'
+import {FaPencilAlt, FaTrashAlt} from 'react-icons/fa'
+import deleteList from '../redux/actions/Lists/selectedList/deleteList'
 import ListItems from './ListItems'
 import EditListTitle from './EditListTitle'
 
 const ListView = () =>{
-    const list = useSelector( state => state.listsState.selectedList)
+    const {selectedList} = useSelector( state => state.listsState)
+    const dispatch = useDispatch()
     const [edit, setEdit] = useState(false)
-    const toggle = () => {
-        console.log('clicked')
+
+    const togEdit = () => {
         setEdit(!edit)
+    }
+
+    const remove = () =>{
+        dispatch(deleteList(selectedList))
+        
     }
     return(
         <div>
-            {/* List title */}
-            {list && <h3>{list.title}</h3>}
-            {list && edit?
-                <EditListTitle toggle={toggle}/>
+            {/* selectedList title */}
+            {selectedList && <h3>{selectedList.title}</h3>}
+            {selectedList && edit?
+                <EditListTitle toggle={togEdit}/>
                 :
-                <FaPencilAlt  onClick={()=> toggle()}/>
+                <FaPencilAlt  onClick={()=> togEdit()}/>
             }
-            {/* scrollable list of items */}
-            {list && <ListItems items={list.list_items}/> }
+            {selectedList && <FaTrashAlt  onClick={ () => remove() } /> }
+            {/* scrollable selectedList of items */}
+            {selectedList && <ListItems items={selectedList.List_items}/> }
         </div>
     )
 }
