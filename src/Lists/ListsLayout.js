@@ -5,6 +5,7 @@ import Loading from '../Shared/Loading.js'
 import Logo from '../Shared/Logo.js'
 //------------------------------------------ components ------------------------------------------//
 import MainMenu from '../Shared/MainMenu/MainMenu.js'
+import CreateList from './CreateList.js'
 import ListsIndex from './ListsIndex.js'
 import ListView from './ListView.js'
 //-------------------------------------------- styles --------------------------------------------//
@@ -22,6 +23,7 @@ const ListsLayout = () => {
                     {/* Logo top left corner */}
                     <Logo />
                     <MainMenu />
+                    <CreateList/>
                     {/* displayed List */}
                     <ListView />   
                     {/* Listseption */}

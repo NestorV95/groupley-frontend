@@ -19,7 +19,7 @@ const loadLists = (group) => async (dispatch) => {
     })
     .catch(error=>{
         dispatch(fetchListsFailure(error.message))
-})
+    })
 }
 
 export default loadLists
