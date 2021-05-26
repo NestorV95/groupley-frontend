@@ -14,6 +14,7 @@ const loadUser = () => async (dispatch) => {
     .then(res=>res.json())
     .then(({user})=>{
         dispatch(fetchUserRequest())
+        // console.log(user)
         const loadedUser = {
             id: user.id,
             image: user.image,
@@ -21,6 +22,7 @@ const loadUser = () => async (dispatch) => {
             username: user.username,
             first_name: user['first_name'],
             last_name: user['last_name'],
+            groups: user['group_users']
         }
         const {groups} = user
         dispatch(setGroups(groups))
