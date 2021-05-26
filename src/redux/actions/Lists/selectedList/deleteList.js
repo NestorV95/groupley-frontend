@@ -1,4 +1,4 @@
-import {fetchListRequest, fetchListFailure} from './fetchList'
+import {fetchListRequest} from './fetchList'
 
 const removeList = list => {
     return {
@@ -12,7 +12,6 @@ const deleteList = sList => async (dispatch, getState) => {
 
     const state = getState()
     const {selectedGroup} = state.groupState
-    console.log("1st",sList)
 
     const req = {
         method: "DELETE",

@@ -1,16 +1,16 @@
 import React from 'react'
 import {useDispatch,useSelector} from 'react-redux'
-import selectGroup from '../redux/actions/groups/selectedGroup/selectGroup'
-import loadLists from '../redux/actions/Lists/loadLists'
+import loadGroup from '../redux/actions/groups/selectedGroup/loadGroup'
+// import loadLists from '../redux/actions/Lists/loadLists'
 
 const DashboardGroupsTile = () => {
     const {groups} = useSelector(state => state.groupState)
     const dispatch = useDispatch()
 
     const getGroup = group => {
-        dispatch(selectGroup(group))
-        dispatch(loadLists(group))
+        dispatch(loadGroup(group))
     }
+
     return (
         <div>
             {groups.map(group=>{

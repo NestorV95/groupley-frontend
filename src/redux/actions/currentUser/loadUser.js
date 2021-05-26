@@ -14,7 +14,7 @@ const loadUser = () => async (dispatch) => {
     .then(res=>res.json())
     .then(({user})=>{
         dispatch(fetchUserRequest())
-        // console.log(user)
+        console.log(user)
         const loadedUser = {
             id: user.id,
             image: user.image,

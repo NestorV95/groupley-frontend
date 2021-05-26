@@ -7,6 +7,7 @@ import LeaveGroupButton from './LeaveGroupButton'
 import GroupMemStatus from './GroupMemStatus'
 import JoinGroupButton from './JoinGroupButton'
 import CreateGroup from './CreateGroup'
+import GroupUsersList from './GroupUsersList'
 
 
 
@@ -22,6 +23,9 @@ const GroupLayout = () => {
             <LeaveGroupButton />
             <JoinGroupButton />
             <CreateGroup />
+            {/* List of group users */}
+            <GroupUsersList />
+
             
         </div>
     )
