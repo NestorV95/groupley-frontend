@@ -1,0 +1,19 @@
+.groupley{
+position: absolute;
+margin: 0;
+padding: 0;
+top: .5rem;
+left: 5rem;
+font-size: 3.5rem;
+color: #FFFFFF;
+font-weight: 900;
+text-shadow: 
+    -0.009rem 0.0075rem 0 #7d5dff,
+    0.006rem 0.005rem 0 #7d5dff,
+    0.02rem 0.01rem 0 #7d5dff,
+    0.03rem 0.02rem 0  #7d5dff, 
+    0.02rem 0.02rem 0 #7d5dff, 
+    0.03rem 0.02rem 0  #7d5dff, 
+    0.04rem 0.03rem 0 #7d5dff, 
+    0.04rem 0.03rem 0 #7d5dff; 
+}

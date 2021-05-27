@@ -2,8 +2,9 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
 import Loading from '../Shared/Loading.js'
-import Logo from '../Shared/Logo.js'
+import Logo from '../Shared/Logo/Logo.js'
 //------------------------------------------ components ------------------------------------------//
+import Groupley from '../Shared/Groupley/Groupley'
 import MainMenu from '../Shared/MainMenu/MainMenu.js'
 import CreateList from './CreateList.js'
 import ListsIndex from './ListsIndex.js'
@@ -22,6 +23,7 @@ const ListsLayout = () => {
                     <h1>Lists Page</h1>
                     {/* Logo top left corner */}
                     <Logo />
+                    <Groupley />
                     <MainMenu />
                     <CreateList/>
                     {/* displayed List */}

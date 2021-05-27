@@ -1,8 +1,11 @@
 //------------------------------------------- packages -------------------------------------------//
 import React from 'react'
-import Logo from '../Shared/Logo'
+
 //------------------------------------------ components ------------------------------------------//
+import Logo from '../Shared/Logo/Logo.js'
+import Groupley from '../Shared/Groupley/Groupley'
 import MainMenu from '../Shared/MainMenu/MainMenu'
+
 //-------------------------------------------- styles --------------------------------------------//
 
 //--------------------------------------- calander layout ----------------------------------------//
@@ -11,6 +14,7 @@ const CalanderLayout = () => {
         <div>
             <h1>Calander Page</h1>
             <Logo />
+            <Groupley />
             <MainMenu />
             {/* Big interactive Calander */}
             {/* Selected day column */}

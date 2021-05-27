@@ -1,0 +1,32 @@
+.logo-div{
+    position: absolute;
+    height: 4rem;
+    width: 4rem;
+    top: 0.25rem;
+    left: 0.25rem;
+    border: 1px solid #7d5dff;
+    border-radius: 50%;
+    
+}
+
+.logo-img{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.logo-img:hover{
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(359deg)
+    }
+    
+}
+
+

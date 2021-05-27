@@ -3,7 +3,7 @@ import React,{useLayoutEffect, useState} from 'react'
 //------------------------------------------ components ------------------------------------------//
 import {Redirect} from 'react-router-dom'
 //-------------------------------------------- styles --------------------------------------------//
-
+import '../styles/Login.css'
 //----------------------------------------- sign up form -----------------------------------------//
 const LoginButton = () =>{
     const [logIn, setLogIn] = useState(false)
@@ -13,13 +13,13 @@ const LoginButton = () =>{
     }, [setLogIn])
 
     return(
-        <div>
+        <>
             { logIn ? 
                 <Redirect to="/login"/> 
                 : 
-                <button onClick={()=>setLogIn(true)}>log in</button>
+                <button className="login-btn" onClick={ () => setLogIn( true ) } >log in</button>
             }
-        </div> 
+        </>
     )
 }
 

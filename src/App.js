@@ -8,7 +8,7 @@ import loadUser from './redux/actions/currentUser/loadUser'
 import {authenticated, authStatus} from './redux/actions/auth/authStatus'
 
 //-------------------------------------------- styles --------------------------------------------//
-import './App.css';
+import './styles/App.css';
 //----------------------------------------- application ------------------------------------------//
 
 const  App = props => {
@@ -19,7 +19,6 @@ const  App = props => {
   useEffect(() => {
     dispatch( authStatus()) 
     if (authenticated === true){ dispatch( loadUser() ) }
-    // if (authenticated !== null ){ dispatch( loadGroups() ) }
     // eslint-disable-next-line
   }, [])
 

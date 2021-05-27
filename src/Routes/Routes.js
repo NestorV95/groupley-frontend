@@ -1,7 +1,5 @@
 //------------------------------------------- packages -------------------------------------------//
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
-// import {useSelector} from 'react-redux'
-// import React, { createContext } from "react"
 //------------------------------------------ components ------------------------------------------//
 import CalanderLayout from "../Calander/CalanderLayout"
 import DashboardLayout from "../Dashboard/DashboardLayout"
