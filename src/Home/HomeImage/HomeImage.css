@@ -1,0 +1,9 @@
+.home-image{
+    position: absolute;
+    background: center / contain no-repeat url('../../Assets/Photos/home-image.png');
+    position: absolute;
+    height: 30rem;
+    width: 30rem;
+    bottom: 0rem;
+    right: 10rem;
+}

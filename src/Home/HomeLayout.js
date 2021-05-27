@@ -4,6 +4,7 @@ import React from 'react'
 import LoginButton from '../Shared/LoginButton'
 import Groupley from '../Shared/Groupley/Groupley'
 import Logo from '../Shared/Logo/Logo.js'
+import HomeImage from './HomeImage/HomeImage'
 //-------------------------------------------- styles --------------------------------------------//
 
 //----------------------------------------- home layout ------------------------------------------//
@@ -20,6 +21,7 @@ const HomeLayout = props => {
             {/* CTA below one liner */}
             {/* Learn More button. purpose TBD */}
             {/* Some sort of art/image next to Text */}
+            <HomeImage />
         </div>
     )
 }
