@@ -2,6 +2,7 @@ import {fetchGroupRequest, fetchGroupSuccess, fetchGroupFailure} from './fetchGr
 
 const updateGroup = log => async (dispatch, getState) => {
     const state = getState()
+    console.log(state)
     const {selectedGroup} = state.groupState
 
     const req={

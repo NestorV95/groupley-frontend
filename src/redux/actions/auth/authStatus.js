@@ -1,8 +1,4 @@
-// // import {useSelector} from 'react-redux'
-// import tokenCheck from './tokenCheck'
-// import tokenValidation from './tokenValidation'
-
-const auth = status => {
+export const auth = status => {
     return {
         type: 'AUTH_STATUS',
         status: status

@@ -16,19 +16,15 @@ const ListsLayout = () => {
     const {loading} = useSelector(state => state.currentUserState)
     return (
         <>
-            { loading !== false?
+            <Logo />
+            <Groupley />
+            { loading?
                 <Loading />
                 :
-                <div>
-                    <h1>Lists Page</h1>
-                    {/* Logo top left corner */}
-                    <Logo />
-                    <Groupley />
+                <div className="window">
                     <MainMenu />
                     <CreateList/>
-                    {/* displayed List */}
                     <ListView />   
-                    {/* Listseption */}
                     <ListsIndex />
                 </div>
             }

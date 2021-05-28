@@ -13,7 +13,7 @@ const DashboardGroupsTile = () => {
 
     return (
         <div>
-            {groups.map(group=>{
+            {groups && groups.map(group=>{
                     return <li onClick={()=> getGroup(group)}>{group.name}</li>
                 })
             }

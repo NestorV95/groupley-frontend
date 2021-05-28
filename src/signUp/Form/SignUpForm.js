@@ -2,9 +2,9 @@
 import React,{useState} from 'react'
 import {useDispatch} from 'react-redux'
 //------------------------------------------ components ------------------------------------------//
-import signUpUser from '../redux/actions/currentUser/signUpUser'
+import signUpUser from '../../redux/actions/currentUser/signUpUser'
 //-------------------------------------------- styles --------------------------------------------//
-
+import './SignUpForm.css'
 //----------------------------------------- sign up form -----------------------------------------//
 const SignUpForm = () => {
 
@@ -34,18 +34,19 @@ const SignUpForm = () => {
     }  
     
     return (
-
-        <div>
-            <input value={firstName} onChange={(e)=>setFirstName(e.target.value)} placeholder='first name' /><br/>
-            <input value={lastName} onChange={(e)=>setLastName(e.target.value)} placeholder='last name' /><br/>
-            <input value={username} onChange={(e)=>setUsername(e.target.value)} placeholder='username' /><br/>
-            <input value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='email' /><br/>
-            <input value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='password' /> <br/>
-            <input value={passwordConfirmation} onChange={(e)=>setPasswordConfirmation(e.target.value)} placeholder='password confirmation' /> <br/>
-            <button onClick={()=>HandleSubmit()}>sign up</button>
+        <div className="suf-div">
+            {/* error handling on form */}
+            {/* on valid redirects to dashboard */}
+            <p className="suf-text suf-title">Sign Up</p>
+            <input className="suf-text suf-input" value={firstName} onChange={(e)=>setFirstName(e.target.value)} placeholder='first name' />
+            <input className="suf-text suf-input" value={lastName} onChange={(e)=>setLastName(e.target.value)} placeholder='last name' />
+            <input className="suf-text suf-input" value={username} onChange={(e)=>setUsername(e.target.value)} placeholder='username' />
+            <input className="suf-text suf-input" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='email' />
+            <input className="suf-text suf-input" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='password' /> 
+            <input className="suf-text suf-input" value={passwordConfirmation} onChange={(e)=>setPasswordConfirmation(e.target.value)} placeholder='password confirmation' />
+            <button className="suf-text suf-button" onClick={()=>HandleSubmit()}>sign up</button>
 
         </div>
-
     )
 }
 

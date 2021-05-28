@@ -1,5 +1,4 @@
-
-.lgn-div{
+.lif-div{
     position: absolute;
     display: block;
     z-index: 1;
@@ -8,31 +7,16 @@
     top: 14vh;
     left: 32vw ;
     width: 30rem;
-    height: 30rem;
+    height: 20rem;
     background: rgba(125, 93, 255, 0.45);
     border-radius: 6%;
 }
 
-
-
-.login-btn{
-    position: absolute; 
-    margin: auto;
-    padding:auto;
-    background: #7d5dff;
-    border: 1px solid #7d5dff;
-    height: 2rem;
-    width: 10rem;
-    top: 1rem;
-    right: 3rem;
+.lif-text{
     font-family: Roboto;
     font-weight: 600;
-    font-size: 1.20rem;
-    text-decoration: none;
-    text-align: center;
+    padding: 0;
     color: #ffffff;
-    box-sizing: border-box;
-    z-index: 2;
     text-shadow: 
         -0.02rem 0.02rem 0 #5d3be4,
         0.01rem 0.01rem 0 #5D3BE4,
@@ -41,10 +25,47 @@
         0.03rem 0.04rem 0 #5D3BE4, 
         0.02rem 0.05rem 0  #5D3BE4, 
         0.09rem 0.02rem 0 #5D3BE4, 
-        0.05rem 0.01rem 0 #5D3BE4;
+        0.05rem 0.01rem 0 #5D3BE4; 
 }
 
-.login-btn:hover{
+.lif-title{
+    margin: 1rem auto 1rem auto;  
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.lif-input{
+    display: block;
+    margin: 0 auto .33rem auto;
+    outline: none;
+    border: none; 
+    border-bottom:1px solid #ffffff;
+    background: transparent;
+    height: 1.75rem;
+    width: 15rem;
+    font-size: 1.10rem;
+    z-index: 2;
+}
+
+.lif-input::placeholder{
+    color:#ffffff ;
+}
+
+.lif-button{
+    margin: 0 auto 0.33rem auto;
+    display: block;
+    height: 2rem;
+    width: 15rem;
+    background: #7d5dff;
+    border: 1px solid #7d5dff;
+    font-size: 1.20rem;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 2; 
+}
+
+.lif-button:hover{
     background: #ffffff;
     color: #5d3be4;
     text-shadow:
@@ -58,3 +79,8 @@
         0.05rem 0.01rem 0 #bbaaff;
 }
 
+.lif-or{
+    text-align: center;
+    margin: 0 auto 0.33rem auto;
+
+}

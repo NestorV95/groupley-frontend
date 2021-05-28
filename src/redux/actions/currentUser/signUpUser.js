@@ -1,5 +1,5 @@
 import { fetchUserRequest,fetchUserSuccess,fetchUserFailure} from './fetchUser'
-import {authStatus} from '../auth/authStatus'
+import { auth } from '../auth/authStatus'
 
 const signUpUser = (log) => async (dispatch)=>{
     dispatch(fetchUserRequest())
@@ -11,9 +11,9 @@ const signUpUser = (log) => async (dispatch)=>{
     fetch('http://localhost:3000/api/v1/signup',req)
     .then(res=>res.json())
     .then(data=>{
-        dispatch(authStatus(true))
-        localStorage.setItem('token', data.jwt)
         dispatch(fetchUserSuccess(data.user))
+        localStorage.setItem('token', data.jwt)
+        if (data.jwt !== undefined){dispatch( auth( true ) )}
     })
     .catch(error=>{
         dispatch(fetchUserFailure(error.message))

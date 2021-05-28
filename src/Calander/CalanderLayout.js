@@ -11,7 +11,7 @@ import MainMenu from '../Shared/MainMenu/MainMenu'
 //--------------------------------------- calander layout ----------------------------------------//
 const CalanderLayout = () => {
     return (
-        <div>
+        <div className="window">
             <h1>Calander Page</h1>
             <Logo />
             <Groupley />

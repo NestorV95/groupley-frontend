@@ -1,0 +1,29 @@
+.home{
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    width: 30rem;
+    left: 8rem;
+    color: #cbccff;
+    font-weight: 800;
+    text-shadow: 
+        -0.01rem 0.008rem 0 #7d5dff,
+        0.006rem 0.005rem 0 #7d5dff,
+        0.02rem 0.01rem 0 #7d5dff,
+        0.03rem 0.02rem 0  #7d5dff, 
+        0.02rem 0.02rem 0 #7d5dff, 
+        0.03rem 0.02rem 0  #7d5dff, 
+        0.04rem 0.03rem 0 #7d5dff, 
+        0.04rem 0.03rem 0 #7d5dff; 
+    }
+
+.one-lnr{  
+    top: 15rem;
+    font-size: 2.25rem;
+}
+
+.cta{
+    top: 21rem;
+    font-size: 1.5rem;
+}

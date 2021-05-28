@@ -1,13 +1,22 @@
 .App {
-  text-align: center;
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
-
+.window{
+  height: 36rem;
+  width: 84rem ;
+  background: rgb(255, 185, 185);
+  flex: column;
+  align-items: stretch;
+  border-radius: 50px;
+}
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {

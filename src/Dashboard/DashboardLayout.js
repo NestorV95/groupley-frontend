@@ -1,7 +1,6 @@
 //------------------------------------------- packages -------------------------------------------//
 import React from 'react'
 import {useSelector} from 'react-redux'
-
 //------------------------------------------ components ------------------------------------------//
 import Loading from '../Shared/Loading'
 import Logo from '../Shared/Logo/Logo.js'
@@ -14,27 +13,23 @@ import DashboardSummaryTile from './DashboardSummaryTile'
 
 //--------------------------------------- dashboard layout ---------------------------------------//
 const DashboardLayout = () => {
-    const {loading} = useSelector(state => state.currentUserState)
+    const {loading, currentUser} = useSelector(state => state.currentUserState)
 
     return (
         <>
-            {loading !== false?
+            <Logo />
+            <Groupley />
+            {loading?
                 <Loading />
                 :
-                <div>
-                    <h1>Dashboard Page</h1>
-                    {/* Logo top left corner */}
-                    <Logo />
-                    <Groupley />
+                <div className="window" >
                     <MainMenu />
-                    {/* Summary tile */}
-                    <DashboardCurrentGroupTile />
-                    <DashboardGroupsTile />
-                    <DashboardSummaryTile />
+                    {currentUser && <DashboardCurrentGroupTile />}
+                    {currentUser && <DashboardGroupsTile />}
+                    {currentUser && <DashboardSummaryTile />}
                     {/* tiles tbd */} 
                 </div>
-            }
-            
+            } 
         </>
     )
 }
