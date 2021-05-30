@@ -13,19 +13,19 @@ const MainMenuNavBar = () => {
         <li className="mm-nli">
           <Link className="mm-na" to="/dashboard"> Dashboard </Link>
         </li>
-        <li className="mm-nli">
+        {/* <li className="mm-nli">
           <Link className="mm-na" to="/calander"> Calander </Link>
         </li>
         <li className="mm-nli">
           <Link className="mm-na" to="/messages"> Messages </Link>
-        </li>
+        </li> */}
         <li className="mm-nli">
           <Link className="mm-na" to="/groups"> Groups </Link>
         </li>
         <li className="mm-nli">
           <Link className="mm-na" to="/lists"> Lists </Link>
         </li>
-        <li className="mm-nli">
+        {/* <li className="mm-nli">
           <Link className="mm-na" to="/budget"> Budget </Link>
         </li>
         <li className="mm-nli">
@@ -81,7 +81,7 @@ const MainMenuNavBar = () => {
         </li>
         <li className="mm-nli">
           <Link className="mm-na" to="/budget"> Budget </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
