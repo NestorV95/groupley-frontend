@@ -1,6 +1,6 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import joinGroup from '../redux/actions/groups/selectedGroup/JoinGroup'
+import joinGroup from '../../../redux/actions/groups/selectedGroup/JoinGroup'
 
 const JoinGroupButton = () => {
     const dispatch = useDispatch()

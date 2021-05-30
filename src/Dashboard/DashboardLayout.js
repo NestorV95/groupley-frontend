@@ -6,28 +6,23 @@ import Loading from '../Shared/Loading'
 import Logo from '../Shared/Logo/Logo.js'
 import Groupley from '../Shared/Groupley/Groupley'
 import MainMenu from '../Shared/MainMenu/MainMenu'
-import DashboardCurrentGroupTile from './DashboardCurrentGroupTile'
-import DashboardGroupsTile from './DashboardGroupsTile'
-import DashboardSummaryTile from './DashboardSummaryTile'
+import DashboardTiles from './Tiles/DashboardTiles'
 //-------------------------------------------- styles --------------------------------------------//
 
 //--------------------------------------- dashboard layout ---------------------------------------//
 const DashboardLayout = () => {
-    const {loading, currentUser} = useSelector(state => state.currentUserState)
+    const {loading} = useSelector(state => state.currentUserState)
 
     return (
         <>
-            <Logo />
-            <Groupley />
-            {loading?
+            < Logo />
+            < Groupley />
+            { loading ?
                 <Loading />
                 :
                 <div className="window" >
                     <MainMenu />
-                    {currentUser && <DashboardCurrentGroupTile />}
-                    {currentUser && <DashboardGroupsTile />}
-                    {currentUser && <DashboardSummaryTile />}
-                    {/* tiles tbd */} 
+                    <DashboardTiles />
                 </div>
             } 
         </>

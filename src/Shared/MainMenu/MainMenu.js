@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 
 import CurrentUserProfilePicture from './ProfilePicture/CurrentUserProfilePicture'
 import MainMenuNavBar from './MMChildren/MainMenuNavBar'
@@ -8,7 +9,7 @@ import Settings from './MMChildren/Settings/Settings'
 import SettingsButton from './MMChildren/Settings/SettingsButton'
 
 import './MainMenu.css'
-import { useSelector } from 'react-redux'
+
 
 const MainMenu = () => {
     const [settings, setSettings] = useState(false)
@@ -19,13 +20,22 @@ const MainMenu = () => {
     const notos = () =>{ setNotifications(!notifications) }
 
     return (
-        <div className="mm-div">
-            <SettingsButton settings={setti} />
-            {settings === true? <Settings /> : null}
-            <NotificationsButton notifications={notos} />
-            {notifications? <Notifications /> : null}
-            {currentUser && <CurrentUserProfilePicture />}
+        <div className="win-mm">
+
+            <div className="mm-top">
+
+                <SettingsButton settings={setti} />
+                {settings === true? <Settings /> : null}
+
+                {currentUser && <CurrentUserProfilePicture />}
+
+                <NotificationsButton notifications={notos} />
+                {notifications? <Notifications /> : null}
+
+            </div>
+
             <MainMenuNavBar />
+            
         </div>
     )
 }

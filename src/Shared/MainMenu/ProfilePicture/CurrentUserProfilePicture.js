@@ -15,8 +15,8 @@ const CurrentUserProfilePicture = () => {
     }
     
     return (
-        <div style={cuDiv}>
-            <img style={cuImg} src={currentUser.image} alt={currentUser.name}/>
+        <div className="mmpp-div">
+            <img className="mmpp-img" src={currentUser.image} alt={currentUser.name}/>
             { edit ===true?
                 <EditProfilePictureForm edit={editPicture} />
                 :
@@ -26,7 +26,6 @@ const CurrentUserProfilePicture = () => {
     )
 }
 
-const cuDiv = {height: '10rem', width:'10rem'}
-const cuImg = {height: '100%', width:'100%', border: '1px solid black', borderRadius: '50%'}
+
 
 export default CurrentUserProfilePicture

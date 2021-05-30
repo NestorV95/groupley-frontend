@@ -1,5 +1,6 @@
 import { fetchUserRequest,fetchUserSuccess,fetchUserFailure} from './fetchUser'
 import setGroups from '../groups/setGroups'
+import selectGroup from '../groups/selectedGroup/selectGroup'
 
 const loadUser = () => async (dispatch) => {
     const req={
@@ -26,6 +27,7 @@ const loadUser = () => async (dispatch) => {
         }
         const {groups} = user
         dispatch(setGroups(groups))
+        if( groups.length > 0 ){ dispatch( selectGroup( groups[0] ) ) }
 
         dispatch(fetchUserSuccess(loadedUser))
     })

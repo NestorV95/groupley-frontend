@@ -5,15 +5,11 @@ import Loading from '../Shared/Loading.js'
 import Logo from '../Shared/Logo/Logo.js'
 import Groupley from '../Shared/Groupley/Groupley'
 import MainMenu from '../Shared/MainMenu/MainMenu'
-import GroupBanner from './GroupBanner'
-import LeaveGroupButton from './LeaveGroupButton'
-import GroupMemStatus from './GroupMemStatus'
-import JoinGroupButton from './JoinGroupButton'
-import CreateGroup from './CreateGroup'
-import GroupUsersList from './GroupUsersList'
+import GroupTiles from './Tiles/GroupTiles.js'
 
 const GroupLayout = () => {
     const {loading} = useSelector(state => state.currentUserState)
+    const {selectedGroup} = useSelector(state => state.groupState)
 
     return (
         <>
@@ -24,12 +20,7 @@ const GroupLayout = () => {
                 :
                 <div className="window">
                     <MainMenu />
-                    <GroupBanner />
-                    <GroupMemStatus />
-                    <LeaveGroupButton />
-                    <JoinGroupButton />
-                    <CreateGroup />
-                    <GroupUsersList />
+                    {selectedGroup && <GroupTiles /> }
                 </div>
             }
         </>

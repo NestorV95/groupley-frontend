@@ -4,6 +4,7 @@ import {FaPencilAlt, FaTrashAlt} from 'react-icons/fa'
 import deleteList from '../redux/actions/Lists/selectedList/deleteList'
 import ListItems from './ListItems'
 import EditListTitle from './EditListTitle'
+import CreateList from './CreateList'
 
 const ListView = () =>{
     const {selectedList} = useSelector( state => state.listsState)
@@ -19,7 +20,8 @@ const ListView = () =>{
         
     }
     return(
-        <div>
+        <div className="win-view">
+            < CreateList />
             {/* selectedList title */}
             {selectedList && <h3>{selectedList.title}</h3>}
             {selectedList && edit?

@@ -20,7 +20,6 @@ const logInUser = (log) => async (dispatch) => {
         dispatch(fetchUserFailure(error.message))
     })
     
-    
 }
 
 export default logInUser

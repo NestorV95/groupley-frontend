@@ -3,6 +3,7 @@ import React from 'react'
 const GroupUserTile = ({user}) => {
     return (
         <li style={gutLi}>
+            
             <div style={gutDiv}>
                 <img style={gutImg}src={user.image} alt={user.username}  />
             </div>

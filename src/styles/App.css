@@ -1,6 +1,4 @@
 .App {
-  margin: 0;
-  padding: 0;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -12,10 +10,53 @@
 .window{
   height: 36rem;
   width: 84rem ;
-  background: rgb(255, 185, 185);
-  flex: column;
+  background: #e0dbfd;
+  display: flex;
+  flex-direction: row;
   align-items: stretch;
   border-radius: 50px;
+  box-shadow: 
+    1px 1px 10px #5d3be44b,
+    inset 1px 1px 10px #5d3be44b;
+
+}
+
+.win-mm{
+  display: flex;
+  align-items:stretch ;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1 0 7.50rem;
+  height: 100%;
+  background-color: #d1c7f9 ;
+  border-radius: 50px 0px 0px 50px
+}
+
+.win-tiles{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 8 4 15rem;
+  height: 100%;
+  border:1px solid turquoise ;
+  border-radius: 0px 50px 50px 0px
+}
+
+.win-view{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 7 4 10rem;
+  height: 100%;
+  border:1px solid turquoise ;
+
+}
+
+.win-index{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 5rem;
+  height: 100%;
+  border:1px solid turquoise ;
+  border-radius: 0px 50px 50px 0px;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {

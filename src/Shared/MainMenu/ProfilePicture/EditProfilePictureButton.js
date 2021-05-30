@@ -4,7 +4,7 @@ import {FaUpload} from 'react-icons/fa'
 const EditProfilePictureButton = ({edit}) => {
 
     return (
-        <FaUpload onClick={()=>edit()}/>
+        <FaUpload className="mm-icon" onClick={()=>edit()}/>
     )
     
 }

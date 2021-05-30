@@ -6,11 +6,11 @@ import Logo from '../Shared/Logo/Logo.js'
 //------------------------------------------ components ------------------------------------------//
 import Groupley from '../Shared/Groupley/Groupley'
 import MainMenu from '../Shared/MainMenu/MainMenu.js'
-import CreateList from './CreateList.js'
+// import CreateList from './CreateList.js'
 import ListsIndex from './ListsIndex.js'
 import ListView from './ListView.js'
 //-------------------------------------------- styles --------------------------------------------//
-
+import './Lists.css'
 //----------------------------------------- lists layout -----------------------------------------//
 const ListsLayout = () => {
     const {loading} = useSelector(state => state.currentUserState)
@@ -23,7 +23,6 @@ const ListsLayout = () => {
                 :
                 <div className="window">
                     <MainMenu />
-                    <CreateList/>
                     <ListView />   
                     <ListsIndex />
                 </div>

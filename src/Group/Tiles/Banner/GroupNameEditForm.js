@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
-import updateGroup from '../redux/actions/groups/selectedGroup/updateGroup'
+import updateGroup from '../../../redux/actions/groups/selectedGroup/updateGroup'
 
 const GroupNameEditForm = () => {
     const [newName,setName] = useState('')

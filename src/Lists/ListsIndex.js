@@ -14,13 +14,15 @@ const ListsIndex = () => {
 
     const lists = useSelector( state => state.listsState.lists )
     return(
-        <ul>
-            {/* scrollable list of lists */}
-            {/* clicking a lists replaces displayed list*/}
-            {lists && lists.map(list=>{
+        <div className="win-index">
+            <ul>
+                {/* scrollable list of lists */}
+                {/* clicking a lists replaces displayed list*/}
+                {lists && lists.map(list=>{
                 return <ListIndexCard key={list.id} list={list}/>
-            })}
-        </ul>
+                })}
+            </ul>
+        </div>
     )
 }
 

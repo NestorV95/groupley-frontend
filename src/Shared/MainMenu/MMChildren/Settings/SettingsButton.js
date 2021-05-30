@@ -3,7 +3,7 @@ import {FaCog} from "react-icons/fa";
 
 const SettingsButton = ({settings}) => {
     return (
-        <FaCog onClick={()=>settings()}/>
+        <FaCog className="mm-opt mm-icon"onClick={()=>settings()}/>
     )
 }
 

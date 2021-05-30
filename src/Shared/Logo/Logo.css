@@ -1,12 +1,11 @@
 .logo-div{
     position: absolute;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     top: 0.25rem;
     left: 0.25rem;
     border: 1px solid #7d5dff;
-    border-radius: 50%;
-    
+    border-radius: 50%; 
 }
 
 .logo-img{

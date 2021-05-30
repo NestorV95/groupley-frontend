@@ -8,7 +8,7 @@ const GroupUsersList = () => {
     
     return (
         <div>
-            <p>{users.length} members</p>
+            {users && <p>{users.length} members</p>}
             <div style={gulOuter}>
                 <ul style={gulinner}>
                     {users && users.map( user =>{ 

@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {useDispatch} from 'react-redux'
-import createGroup from '../redux/actions/groups/selectedGroup/createGroup'
+import createGroup from '../../../redux/actions/groups/selectedGroup/createGroup'
 
 const CreateGroupForm = ({toggle}) => {
     const [image, setImage] = useState('')  

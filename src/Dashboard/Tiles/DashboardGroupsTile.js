@@ -1,6 +1,6 @@
 import React from 'react'
 import {useDispatch,useSelector} from 'react-redux'
-import loadGroup from '../redux/actions/groups/selectedGroup/loadGroup'
+import loadGroup from '../../redux/actions/groups/selectedGroup/loadGroup'
 // import loadLists from '../redux/actions/Lists/loadLists'
 
 const DashboardGroupsTile = () => {

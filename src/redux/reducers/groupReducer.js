@@ -2,13 +2,7 @@ const initialState = {
     loading: null,
     groups:null,
     error: null,
-    selectedGroup: {
-        image: null,
-        name: null,
-        code: null,
-        users: []
-    }
-    
+    selectedGroup: {}
 }
 
 const groupReducer = (state=initialState, action)=>{

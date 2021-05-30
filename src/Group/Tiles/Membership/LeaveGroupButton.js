@@ -1,6 +1,6 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import leaveGroup from '../redux/actions/groups/selectedGroup/leaveGroup'
+import leaveGroup from '../../../redux/actions/groups/selectedGroup/leaveGroup'
 
 
 const LeaveGroupButton = () => {
