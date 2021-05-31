@@ -1,6 +1,7 @@
 import {fetchGroupRequest, fetchGroupSuccess, fetchGroupFailure} from './fetchGroup'
 import loadLists from '../../Lists/loadLists'
 import selectGroup from './selectGroup'
+import { groupStatus } from './groupStatus'
 
 const loadGroup = (group) => async (dispatch) => {
     dispatch(fetchGroupRequest())
@@ -27,6 +28,7 @@ const loadGroup = (group) => async (dispatch) => {
         dispatch( fetchGroupSuccess( loadedGroup ) )
         dispatch( selectGroup( loadedGroup ) )
         dispatch( loadLists( loadedGroup ) )
+        dispatch( groupStatus(true) )
     })
     .catch(error=>{
         dispatch(fetchGroupFailure(error.message))

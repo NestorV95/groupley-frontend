@@ -1,0 +1,24 @@
+.dash-sum{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 2rem 0 0 0 ;
+    height: 30%;
+    width: 50%;
+    align-content: center;
+    border: 1px solid red;
+}
+
+.sum-cdt{
+    text-align: right;
+    width: 90%;
+    border: 1px solid blue
+
+}
+
+.sum-greet{
+    text-align: center;
+    width: 90%;
+    border: 1px solid blue
+
+}

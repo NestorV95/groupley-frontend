@@ -8,7 +8,7 @@ import Groupley from '../Shared/Groupley/Groupley'
 import MainMenu from '../Shared/MainMenu/MainMenu'
 import DashboardTiles from './Tiles/DashboardTiles'
 //-------------------------------------------- styles --------------------------------------------//
-
+import './Dashboard.css'
 //--------------------------------------- dashboard layout ---------------------------------------//
 const DashboardLayout = () => {
     const {loading} = useSelector(state => state.currentUserState)

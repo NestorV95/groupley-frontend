@@ -2,6 +2,7 @@ const initialState = {
     loading: null,
     groups:null,
     error: null,
+    selectedStatus: false,
     selectedGroup: {}
 }
 
@@ -11,6 +12,12 @@ const groupReducer = (state=initialState, action)=>{
             return{
                 ...state,
                 groups: action.groups
+            }
+
+        case 'GROUP_STATUS':
+            return{
+                ...state,
+                selectedStatus: action.status
             }
         // case 'FETCH_GROUPS_REQUEST':
         //     return{

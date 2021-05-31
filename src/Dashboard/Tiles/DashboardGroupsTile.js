@@ -1,7 +1,7 @@
 import React from 'react'
 import {useDispatch,useSelector} from 'react-redux'
 import loadGroup from '../../redux/actions/groups/selectedGroup/loadGroup'
-// import loadLists from '../redux/actions/Lists/loadLists'
+
 
 const DashboardGroupsTile = () => {
     const {groups} = useSelector(state => state.groupState)
@@ -13,8 +13,9 @@ const DashboardGroupsTile = () => {
 
     return (
         <div>
+            <p>You are currently apart of {groups.length} groups</p>
             {groups && groups.map(group=>{
-                    return <li onClick={()=> getGroup(group)}>{group.name}</li>
+                    return <li key={group.id} onClick={()=> getGroup(group)}>{group.name}</li>
                 })
             }
         </div>
