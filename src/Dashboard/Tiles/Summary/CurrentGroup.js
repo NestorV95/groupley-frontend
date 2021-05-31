@@ -6,7 +6,7 @@ const CurrentGroup = () => {
 
     return (
         <>
-            {selectedGroup && <p>You cuurently have {selectedGroup.name} set as your selected group.</p>}
+            {selectedGroup && <p className="sum-group">You cuurently have {selectedGroup.name} set as your selected group.</p>}
         </>
     )
 

@@ -1,0 +1,135 @@
+.group-text{
+    font-family: Roboto;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 
+        -0.02rem 0.02rem 0 #5d3be4,
+        0.01rem 0.01rem 0 #5D3BE4,
+        0.05rem 0.05rem 0 #5D3BE4,
+        0.03rem 0.03rem 0  #5D3BE4, 
+        0.03rem 0.04rem 0 #5D3BE4, 
+        0.02rem 0.05rem 0  #5D3BE4, 
+        0.09rem 0.02rem 0 #5D3BE4, 
+        0.05rem 0.01rem 0 #5D3BE4; 
+}
+
+.group-btn{
+    background: #7d5dff;
+    border: 1px solid #7d5dff;
+    height: 1.75rem;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 2; 
+}
+
+.group-btn:hover{
+    background: #ffffff;
+    color: #5d3be4;
+    text-shadow:
+        -0.02rem 0.02rem 0#bbaaff,
+        0.01rem 0.01rem 0 #bbaaff,
+        0.05rem 0.05rem 0 #bbaaff,
+        0.03rem 0.03rem 0 #bbaaff, 
+        0.03rem 0.04rem 0 #bbaaff, 
+        0.02rem 0.05rem 0 #bbaaff, 
+        0.09rem 0.02rem 0 #bbaaff, 
+        0.05rem 0.01rem 0 #bbaaff;
+}
+
+.group-icon{
+    color: #ffffff;
+    box-shadow: inset 0px 0px 5px #5d3be47e;
+    border-radius: 45%;
+}
+
+.group-icon:hover{
+    color: #5d3be4;
+    box-shadow: inset 0px 0px 10px #ffffff;
+}
+
+.group-ban{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 0.10 0.10 7.50rem;
+    min-width: 25.25rem;
+    max-width: 50%;
+    align-content: center;
+    justify-content: center;
+    gap: .15rem;
+    border: 1px solid red;
+    background-color: #d1c7f9 ;
+}
+
+.ban-top{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 60%;
+    width: 90%;
+    justify-content: center;
+    border: 1px solid red
+}
+
+.group-name{
+    text-align: center;
+    font-size: 2.5rem;
+    border: 1px solid red
+}
+
+.name-pen{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.name-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.name-input{
+    display: block;
+    outline: none;
+    border: none; 
+    border-bottom:1px solid #ffffff;
+    background: transparent;
+    height: 1.75rem;
+    width: 12rem;
+    font-size: 1.10rem;
+    z-index: 2;
+}
+
+.name-input::placeholder{
+    color:#ffffff ;
+}
+
+.name-edit{
+    font-size: 1.10rem;
+    margin: 0 .66rem
+}
+
+.name-exit{
+    font-size: 1.25rem;
+    width: 1.50rem;
+    height: 1.50rem;
+    border: none;
+    outline: none;
+}
+
+.ban-bot{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 30%;
+    width: 90%;
+    justify-content: center;
+    border: 1px solid red
+}
+
+.group-code{
+    font-size: 1.25rem;
+    width: 70%;
+    border:1px solid red
+}

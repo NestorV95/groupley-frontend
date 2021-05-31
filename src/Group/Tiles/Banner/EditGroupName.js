@@ -14,9 +14,9 @@ const EditGroupName = () => {
     return (
         <>
             {edit?
-                <GroupNameEditForm  />
+                <GroupNameEditForm toggle={toggle} />
                 :
-                <FaPencilAlt onClick={()=>toggle()}/>
+                <FaPencilAlt className="group-icon name-pen" onClick={()=>toggle()}/>
             }
         </>
     )

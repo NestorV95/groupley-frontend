@@ -7,10 +7,10 @@ const GroupName = () => {
     const  {selectedGroup} = useSelector(state => state.groupState)
     
     return (
-        <>
-        <h1>{selectedGroup.name} </h1>
-         < EditGroupName />
-        </>
+        <div className="ban-top">
+            <p className="group-text group-name">{selectedGroup.name}</p>
+            < EditGroupName />
+        </div>
     )
 }
 

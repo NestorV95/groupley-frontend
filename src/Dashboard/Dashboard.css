@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 2rem 0 0 0 ;
     height: 30%;
     width: 50%;
     align-content: center;
@@ -21,4 +20,44 @@
     width: 90%;
     border: 1px solid blue
 
+}
+
+.sum-group{
+    text-align: center;
+    width: 90%;
+    border: 1px solid blue
+}
+
+.sum-lists{
+    text-align: center;
+    width: 90%;
+    border: 1px solid blue
+}
+
+.dash-groups{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 30%;
+    width: 50%;
+    align-content: center;
+    border: 1px solid red;
+}
+
+.dagrp-sum{
+    text-align: left;
+    width: 90%;
+    border: 1px solid blue
+}
+
+.dagrp-ul{
+    text-align: center;
+    width: 90%;
+    border: 1px solid blue
+}
+
+.dagrp-li{
+    text-align: center;
+    width: 100%;
+    border: 1px solid blue
 }

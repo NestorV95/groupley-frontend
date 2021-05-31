@@ -1,7 +1,7 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
 
-import DashboardGroupsTile from './DashboardGroupsTile'
+import DashboardGroupsTile from './Groups/DashboardGroupsTile'
 import DashboardSummaryTile from './Summary/DashboardSummaryTile'
 
 const DashboardTiles = () => {
@@ -11,7 +11,7 @@ const DashboardTiles = () => {
         <div className="win-tiles">
             {currentUser && <DashboardSummaryTile />}
             {currentUser && <DashboardGroupsTile />}
-            {/* tiles tbd */} 
+            {/* more tiles tbd */} 
         </div>
     )
 }

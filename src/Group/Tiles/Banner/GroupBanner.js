@@ -1,13 +1,14 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+
 import GroupName from './GroupName'
+import GroupCode from './GroupCode'
 
 const GroupBanner = () => {
-    const  {selectedGroup} = useSelector(state => state.groupState)
+    
     return (
-        <div>
+        <div className="group-ban">
             <GroupName />
-            <p># {selectedGroup.code}</p>
+            <GroupCode />
         </div>
     )
 }
