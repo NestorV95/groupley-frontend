@@ -2,7 +2,7 @@ import React from 'react'
 
 const AccountEditNameButton = ({toggle}) => {
     return (
-        <button onClick={()=>toggle()}>Edit Name</button>
+        <button className="set-text set-btn set-opt" onClick={()=>toggle()}>Edit Name</button>
     )
 }
 

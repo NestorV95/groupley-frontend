@@ -1,0 +1,92 @@
+.set-div{
+    position: absolute;
+    display: block;
+    text-align: center;
+    background-color: #d1c7f9 ;
+    border-radius: 50px;
+    box-shadow: 
+        1px 1px 10px #5d3be44b,
+        inset 1px 1px 10px #5d3be44b;
+    height: 25rem;
+    width:30rem;
+    top: 21vh;
+    left: 34vw;
+    z-index: 3;
+}
+
+.set-text{
+    font-family: Roboto;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 
+        -0.02rem 0.02rem 0 #5d3be4,
+        0.01rem 0.01rem 0 #5D3BE4,
+        0.05rem 0.05rem 0 #5D3BE4,
+        0.03rem 0.03rem 0  #5D3BE4, 
+        0.03rem 0.04rem 0 #5D3BE4, 
+        0.02rem 0.05rem 0  #5D3BE4, 
+        0.09rem 0.02rem 0 #5D3BE4, 
+        0.05rem 0.01rem 0 #5D3BE4; 
+}
+
+.set-title{
+    margin: 1rem auto 1rem auto;  
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.set-btn{
+    background: #7d5dff;
+    border: 1px solid #7d5dff;
+    font-size: 1.20rem;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 2; 
+}
+
+.set-btn:hover{
+    background: #ffffff;
+    color: #5d3be4;
+    text-shadow:
+        -0.02rem 0.02rem 0#bbaaff,
+        0.01rem 0.01rem 0 #bbaaff,
+        0.05rem 0.05rem 0 #bbaaff,
+        0.03rem 0.03rem 0 #bbaaff, 
+        0.03rem 0.04rem 0 #bbaaff, 
+        0.02rem 0.05rem 0 #bbaaff, 
+        0.09rem 0.02rem 0 #bbaaff, 
+        0.05rem 0.01rem 0 #bbaaff;
+}
+
+.set-input{
+    margin: 0 .35rem .35rem 0;
+    height: 1.5rem;
+    width: 8rem;
+    font-size: 1.25rem;
+}
+
+.set-input::placeholder{
+    color: #ffffff;
+}
+
+.set-ibtn{
+    margin: 0 .35rem .35rem 0;
+    height: 2rem;
+}
+
+.set-opt{
+    display: block;
+    height: 2rem;
+    width: 10rem;
+    margin: 0 auto 0.35rem auto;
+}
+
+.set-exit{
+    position: absolute;
+    display: block;
+    top: 1.25rem;
+    right: 1.25rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}

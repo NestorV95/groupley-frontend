@@ -2,7 +2,7 @@ import React from 'react'
 
 const GroupSettingsButton = ({settings}) => {
     return (
-        <button onClick={()=>settings()}>Group Settings</button>
+        <button className="set-text set-btn" onClick={()=>settings()}>Group Settings</button>
     )
 }
 

@@ -13,7 +13,7 @@ const LogOutButton = () => {
     }
 
     return ( 
-        <button onClick={()=>logOut()}>Log Out</button> 
+        <button className="set-text set-btn set-opt" onClick={()=>logOut()}>Log Out</button> 
     )
 }
 

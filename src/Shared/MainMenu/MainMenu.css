@@ -117,15 +117,13 @@
 }
 
 .mm-nav::-webkit-scrollbar-track{
-    /* box-shadow: inset 0 0 5px rgba(0,0,0,0.3); */
     box-shadow: inset 0 0 5px #ffffff4d;
     border-radius: 10px;
 }
 
 .mm-nav::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    /* box-shadow: inset 0 0 5px rgba(0,0,0,0.5); */
     box-shadow: inset 0 0 5px #5d3be480;
+    border-radius: 10px;
 }
     
 .mm-nul{

@@ -22,8 +22,6 @@ const EditProfilePictureForm = ({edit}) =>{
                 <input className="pp-inp" value={picture} onChange={(e)=>setPicture(e.target.value)} placeholder='Image Url'/>
                 <button className="pp-exit" onClick={()=>edit()}>X</button>
             </div>
-            
-
         </>
 
     )

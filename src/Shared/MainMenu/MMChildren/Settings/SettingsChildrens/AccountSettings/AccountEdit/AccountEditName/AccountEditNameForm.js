@@ -20,10 +20,11 @@ const AccountEditNameForm = ({toggle}) => {
 
         <div>
 
-            <input value={firstName} onChange={(e)=>setFirstName(e.target.value)} placeholder='first name' /><br/>
-            <input value={lastName} onChange={(e)=>setLastName(e.target.value)} placeholder='last name' /><br/> 
-            <button onClick={()=>updateName()}>sign up</button>
-            <button onClick={()=>toggle()}>back</button>
+            <input className="set-text set-input" value={firstName} onChange={(e)=>setFirstName(e.target.value)} placeholder='First Name' />
+            <input className="set-text set-input" value={lastName} onChange={(e)=>setLastName(e.target.value)} placeholder='Last Name' /> <br/>
+            <button className="set-text set-btn set-ibtn" onClick={ ()=>updateName() } >Update</button>
+            <button className="set-text set-btn set-ibtn" onClick={ ()=>toggle() } >Cancel</button>
+
         </div>
 
     )

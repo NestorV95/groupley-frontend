@@ -19,8 +19,8 @@ const AccountDeleteForm = ({cancel}) => {
                 :
                 <div>
                     <p>Click "Confirm" to permanently delete your account</p>
-                    <button onClick ={()=>cancel()}>Cancel</button>
-                    <button onClick={()=>confirm()}>Confirm</button>
+                    <button className="set-text set-btn" onClick={()=>cancel()}>Cancel</button>
+                    <button className="set-text set-btn" onClick={()=>confirm()}>Confirm</button>
                 </div>
             
             }

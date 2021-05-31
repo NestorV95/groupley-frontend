@@ -2,7 +2,7 @@ import React from 'react'
 
 const AccountSettingsButton = ({settings}) => {
     return (
-      <button onClick={()=>settings()} >Account Settings</button>
+      <button className="set-text set-btn set-opt" onClick={()=>settings()} >Account Settings</button>
     )
 }
 

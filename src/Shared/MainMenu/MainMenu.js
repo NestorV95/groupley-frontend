@@ -25,7 +25,7 @@ const MainMenu = () => {
             <div className="mm-top">
 
                 <SettingsButton settings={setti} />
-                {settings === true? <Settings /> : null}
+                {settings === true? <Settings exit={setti}/> : null}
 
                 {currentUser && <CurrentUserProfilePicture />}
 
