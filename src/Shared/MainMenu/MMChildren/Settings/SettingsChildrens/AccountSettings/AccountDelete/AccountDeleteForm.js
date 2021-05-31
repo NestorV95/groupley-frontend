@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { useDispatch} from 'react-redux'
 import { Redirect } from 'react-router'
+
 import deleteUser from '../../../../../../../redux/actions/currentUser/deleteUser'
 
 const AccountDeleteForm = ({cancel}) => {
@@ -18,9 +19,9 @@ const AccountDeleteForm = ({cancel}) => {
                 <Redirect to="/"/> 
                 :
                 <div>
-                    <p>Click "Confirm" to permanently delete your account</p>
-                    <button className="set-text set-btn" onClick={()=>cancel()}>Cancel</button>
-                    <button className="set-text set-btn" onClick={()=>confirm()}>Confirm</button>
+                    <p className="set-text set-prompt" >Click "Confirm" to permanently delete your account.</p> <br/>
+                    <button className="set-text set-btn set-ibtn" onClick={()=>cancel()}>Cancel</button>
+                    <button className="set-text set-btn set-ibtn" onClick={()=>confirm()}>Confirm</button>
                 </div>
             
             }

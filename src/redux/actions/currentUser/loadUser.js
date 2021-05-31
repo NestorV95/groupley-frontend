@@ -1,8 +1,8 @@
 import { fetchUserRequest,fetchUserSuccess,fetchUserFailure} from './fetchUser'
 import setGroups from '../groups/setGroups'
-import selectGroup from '../groups/selectedGroup/selectGroup'
 
 const loadUser = () => async (dispatch) => {
+    dispatch(fetchUserRequest())
     const req={
         method: 'GET',
         headers: {
@@ -14,8 +14,6 @@ const loadUser = () => async (dispatch) => {
     await fetch('http://localhost:3000/api/v1/loggedin',req)
     .then(res=>res.json())
     .then(({user})=>{
-        dispatch(fetchUserRequest())
-        console.log(user)
         const loadedUser = {
             id: user.id,
             image: user.image,
@@ -27,7 +25,6 @@ const loadUser = () => async (dispatch) => {
         }
         const {groups} = user
         dispatch(setGroups(groups))
-        if( groups.length > 0 ){ dispatch( selectGroup( groups[0] ) ) }
 
         dispatch(fetchUserSuccess(loadedUser))
     })
