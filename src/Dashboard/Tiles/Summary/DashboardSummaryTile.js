@@ -6,13 +6,18 @@ import Greeting from './Greeting'
 import ListsSummary from './ListsSummary'
 
 const DashboardSummaryTile = () => {
+
     return (
-        <div className=" dash-tile dash-sum">
+
+        <div className="dash-text dash-tile dash-sum">
+
             <CurrentDateTime />
             <Greeting />
             <CurrentGroup />
             <ListsSummary />
+
         </div>
+        
     )
 }
 

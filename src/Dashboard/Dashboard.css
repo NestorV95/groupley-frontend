@@ -1,4 +1,17 @@
-
+.dash-text{
+    font-family: Roboto;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 
+        -0.02rem 0.02rem 0 #5d3be4,
+        0.01rem 0.01rem 0 #5D3BE4,
+        0.05rem 0.05rem 0 #5D3BE4,
+        0.03rem 0.03rem 0  #5D3BE4, 
+        0.03rem 0.04rem 0 #5D3BE4, 
+        0.02rem 0.05rem 0  #5D3BE4, 
+        0.09rem 0.02rem 0 #5D3BE4, 
+        0.05rem 0.01rem 0 #5D3BE4; 
+}
 
 .dash-tile{
     display: flex;
@@ -7,71 +20,68 @@
     max-width: 50%;
     padding: 1rem;
     align-content: center;
-    gap: .15rem;
+    justify-content: center;
+    gap: .25rem;
     margin: 1rem 0 0 1rem ;
     background-color: #d1c7f9 ; 
+    font-size: 1.15rem; 
 }
 
 .dash-sum{
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     height: 30%;
     width: 50%;
-    align-content: center;
-    border: 1px solid red;
+  
 }
 
 .sum-cdt{
     text-align: right;
+    margin: 0 0 .50rem 0;
     width: 90%;
-    border: 1px solid blue
 }
 
 .sum-greet{
-    text-align: center;
-    width: 90%;
-    border: 1px solid blue
+    text-align: left;
+    margin: 0 0 .50rem 0
 }
 
 .sum-group{
-    text-align: center;
+    display: inline-block;
+    text-align: left;
     width: 90%;
-    border: 1px solid blue
 }
 
 .sum-lists{
-    text-align: center;
+    display: inline-block;
+    text-align: left;
     width: 90%;
-    border: 1px solid blue
 }
 
 .dash-groups{
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    height: 30%;
-    width: 50%;
-    align-content: center;
-    border: 1px solid red;
 }
 
 .dagrp-sum{
     text-align: left;
     width: 90%;
-    border: 1px solid blue
 }
 
 .dagrp-ul{
-    text-align: center;
-    width: 90%;
-    border: 1px solid blue
+    align-self: center;
+    text-align: left;
+    width: 80%;
+    list-style-type: none;
 }
 
-.dagrp-li{
-    text-align: center;
-    width: 100%;
-    border: 1px solid blue
+.dagrp-li:hover{
+    color: #5d3be4;
+    text-shadow:
+        -0.02rem 0.02rem 0#bbaaff,
+        0.01rem 0.01rem 0 #bbaaff,
+        0.05rem 0.05rem 0 #bbaaff,
+        0.03rem 0.03rem 0 #bbaaff, 
+        0.03rem 0.04rem 0 #bbaaff, 
+        0.02rem 0.05rem 0 #bbaaff, 
+        0.09rem 0.02rem 0 #bbaaff, 
+        0.05rem 0.01rem 0 #bbaaff;
 }
-
-

@@ -2,14 +2,14 @@ import React,{useState, useEffect} from 'react'
 
 const CurrentDateTime = () =>{
     const today = new Date();
-    const [time, setTime] = useState(today)
+    const [ time , setTime ] = useState( today )
 
     useEffect(()=>{
-        const timer = setInterval(()=>{
-        setTime(new Date())
-        }, 1000);
+        const timer = setInterval( () => {
+        setTime( new Date() )
+        }, 1000 );
         return ()=>{
-            clearInterval(timer)
+            clearInterval( timer )
         }
     },[])
 
@@ -26,7 +26,7 @@ const CurrentDateTime = () =>{
     })
 
     return(
-        <p className="sum-cdt">{`${wmdy} ${hhmm}`}</p>
+        <p className="sum-cdt" >{ `${ wmdy } ${ hhmm }` }</p>
     )
 }
 

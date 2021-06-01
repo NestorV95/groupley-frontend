@@ -9,9 +9,11 @@ const DashboardTiles = () => {
 
     return (
         <div className="dash-tiles win-tiles">
+
             {currentUser && <DashboardSummaryTile />}
             {currentUser && <DashboardGroupsTile />}
             {/* more tiles tbd */} 
+            
         </div>
     )
 }

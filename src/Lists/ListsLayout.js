@@ -6,8 +6,8 @@ import Logo from '../Shared/Logo/Logo.js'
 //------------------------------------------ components ------------------------------------------//
 import Groupley from '../Shared/Groupley/Groupley'
 import MainMenu from '../Shared/MainMenu/MainMenu.js'
-import ListsIndex from './ListsIndex.js'
-import ListView from './ListView.js'
+import ListsIndex from './Index/ListsIndex.js'
+import ListView from './Show/ListView.js'
 //-------------------------------------------- styles --------------------------------------------//
 import './Lists.css'
 //----------------------------------------- lists layout -----------------------------------------//

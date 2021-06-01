@@ -22,13 +22,12 @@
 
 .win-mm{
   display: flex;
-  align-items:stretch ;
   flex-wrap: wrap;
-  flex-direction: column;
   flex: 1 0 7.50rem;
   height: 100%;
   background-color: #d1c7f9 ;
-  border-radius: 50px 0px 0px 50px
+  border-radius: 50px 0px 0px 50px;
+  overflow: hidden;
 }
 
 .win-tiles{
@@ -51,7 +50,6 @@
   flex: 7 4 10rem;
   height: 100%;
   border:1px solid turquoise ;
-
 }
 
 .win-index{
@@ -59,8 +57,33 @@
   flex-wrap: wrap;
   flex: 1 0 7.5rem;
   height: 100%;
-  border:1px solid turquoise ;
   border-radius: 0px 50px 50px 0px;
+}
+
+.index-inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  background-color: #d1c7f9 ;
+  box-shadow: 
+    1px 1px 10px #5d3be44b,
+    inset 1px 1px 10px #5d3be44b;
+}
+
+.index-top{
+  height: 5rem ;
+  border-radius: 0 50px 0 0 ;
+}
+
+.index-mid{
+  height: 25rem ;
+}
+
+.index-bot{
+  height: 5rem ;
+  border-radius: 0 0 50px 0 ;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {

@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {useDispatch,useSelector} from 'react-redux'
-import saveList from '../redux/actions/Lists/selectedList/saveList'
+import saveList from '../../redux/actions/Lists/selectedList/saveList'
 
 const CreateListForm = ({toggle}) => {
     const {selectedGroup} = useSelector(state=> state.groupState)

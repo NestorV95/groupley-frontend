@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {FaPencilAlt, FaTrashAlt} from 'react-icons/fa'
-import deleteList from '../redux/actions/Lists/selectedList/deleteList'
+import deleteList from '../../redux/actions/Lists/selectedList/deleteList'
 import ListItems from './ListItems'
-import EditListTitle from './EditListTitle'
-import CreateList from './CreateList'
+import EditListTitle from '../EditListTitle'
+import CreateList from '../Create/CreateList'
 
 const ListView = () =>{
     const {selectedList} = useSelector( state => state.listsState)

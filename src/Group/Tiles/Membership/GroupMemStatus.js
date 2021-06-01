@@ -11,7 +11,8 @@ const GroupMemStatus = () => {
             setStatus(true)
             :
             setStatus(false)
-    }, [])
+        // eslint-disable-next-line     
+    }, [selectedGroup])
 
     return (
         <p className="group-text">
