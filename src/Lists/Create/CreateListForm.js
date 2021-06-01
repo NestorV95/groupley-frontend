@@ -16,9 +16,9 @@ const CreateListForm = ({toggle}) => {
     }
     return (
         <div>
-            <input value={title} onChange={(e)=>setTitle(e.target.value)}placeholder='title'/>
-            <button onClick={()=>create()}>save</button>
-            <button onClick={()=>toggle()}>X</button>
+            <input className="list-text tool-input" value={title} onChange={(e)=>setTitle(e.target.value)}placeholder='title'/>
+            <button className="list-text list-btn" onClick={()=>create()}>save</button>
+            <button className="list-text list-btn" onClick={()=>toggle()}>X</button>
         </div>
     )
 }

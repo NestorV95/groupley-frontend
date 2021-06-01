@@ -3,7 +3,7 @@ import React from 'react'
 const CreateListButton = ({toggle}) => {
 
     return (
-       <button onClick={()=>toggle()}>Create List</button>
+       <button className="list-text list-btn"onClick={()=>toggle()}>Create List</button>
     )
 
 }
