@@ -15,8 +15,8 @@ const MainMenuNavBar = () => {
         </li>
         {/* <li className="mm-nli">
           <Link className="mm-na" to="/calander"> Calander </Link>
-        </li>
-        <li className="mm-nli">
+        </li> */}
+        {/* <li className="mm-nli">
           <Link className="mm-na" to="/messages"> Messages </Link>
         </li> */}
         <li className="mm-nli">

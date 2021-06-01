@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux'
 
 import GroupBanner from './Banner/GroupBanner'
 import GroupMembership from './Membership/GroupMembership'
-import CreateGroup from './Create/CreateGroup'
+// import CreateGroup from './Create/CreateGroup'
 import GroupUsersList from './Users/GroupUsersList'
 
 const GroupTiles = () => {
@@ -12,7 +12,7 @@ const GroupTiles = () => {
         <div className="win-tiles">
             { selectedStatus ? < GroupBanner /> : null}
             { selectedStatus ? < GroupMembership /> : null}
-            { selectedStatus ? < CreateGroup/> : null}
+            {/* { selectedStatus ? < CreateGroup/> : null} */}
             { selectedStatus ? < GroupUsersList /> : null }
         </div>
     )

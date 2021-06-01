@@ -7,7 +7,7 @@ import ListsSummary from './ListsSummary'
 
 const DashboardSummaryTile = () => {
     return (
-        <div className="dash-sum">
+        <div className=" dash-tile dash-sum">
             <CurrentDateTime />
             <Greeting />
             <CurrentGroup />

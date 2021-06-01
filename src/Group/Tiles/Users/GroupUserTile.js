@@ -2,19 +2,23 @@ import React from 'react'
 
 const GroupUserTile = ({user}) => {
     return (
-        <li style={gutLi}>
+        <li className="user-card">
             
-            <div style={gutDiv}>
-                <img style={gutImg}src={user.image} alt={user.username}  />
+            <div className="card-img-d">
+
+                <img className="card-img" src={user.image} alt={user.username}  />
+
             </div>
-            <p style={gutP}>@{user.username}</p>
+
+            <p className="group-text card-text">@{user.username}</p>
             
         </li>
     )
 }
 
-const gutLi = {display: 'inline-block', margin: '0', padding: '0 .75rem'}
-const gutDiv = {display: 'inline-block', height: '2.5rem', width:'2.5rem'}
-const gutImg = {height: '100%', width:'100%',objectFit: 'cover', border: '1px solid black', borderRadius: '50%'}
-const gutP = {margin: '0', padding: '0', fontSize: '.8rem'}
+// const gutLi = {display: 'inline-block', margin: '0', padding: '0 .75rem'}
+// const gutDiv = {display: 'inline-block', height: '2.5rem', width:'2.5rem'}
+// const gutImg = {height: '100%', width:'100%',objectFit: 'cover', border: '1px solid black', borderRadius: '50%'}
+// const gutP = {margin: '0', padding: '0', fontSize: '.8rem'}
+
 export default GroupUserTile

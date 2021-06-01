@@ -1,3 +1,17 @@
+
+
+.dash-tile{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 25.25rem;
+    max-width: 50%;
+    padding: 1rem;
+    align-content: center;
+    gap: .15rem;
+    margin: 1rem 0 0 1rem ;
+    background-color: #d1c7f9 ; 
+}
+
 .dash-sum{
     display: flex;
     flex-wrap: wrap;
@@ -12,14 +26,12 @@
     text-align: right;
     width: 90%;
     border: 1px solid blue
-
 }
 
 .sum-greet{
     text-align: center;
     width: 90%;
     border: 1px solid blue
-
 }
 
 .sum-group{
@@ -61,3 +73,5 @@
     width: 100%;
     border: 1px solid blue
 }
+
+

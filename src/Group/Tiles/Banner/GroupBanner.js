@@ -6,7 +6,7 @@ import GroupCode from './GroupCode'
 const GroupBanner = () => {
     
     return (
-        <div className="group-ban">
+        <div className="group-tile banner">
             <GroupName />
             <GroupCode />
         </div>

@@ -6,7 +6,7 @@ import LeaveGroupButton from './LeaveGroupButton'
 
 const GroupMembership = () => {
     return (
-        <div>
+        <div className="group-tile membership">
             <GroupMemStatus />
             <JoinGroupButton />
             <LeaveGroupButton />

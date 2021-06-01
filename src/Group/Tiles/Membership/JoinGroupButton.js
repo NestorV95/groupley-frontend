@@ -9,7 +9,7 @@ const JoinGroupButton = () => {
         dispatch(joinGroup())
     }
     return (
-       <button onClick={()=>join()} >Join Group</button>
+       <button className="group-text group-btn" onClick={()=>join()} >Join Group</button>
     )
 }
 

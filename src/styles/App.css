@@ -9,7 +9,7 @@
 
 .window{
   height: 36rem;
-  width: 84rem ;
+  width: 70rem;
   background: #e0dbfd;
   display: flex;
   flex-direction: row;
@@ -36,6 +36,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   flex: 8 4 15rem;
+  align-content: center;
   height: 100%;
   border-radius: 0px 50px 50px 0px;
   box-shadow: 
@@ -56,7 +57,7 @@
 .win-index{
   display: flex;
   flex-wrap: wrap;
-  flex: 1 0 5rem;
+  flex: 1 0 7.5rem;
   height: 100%;
   border:1px solid turquoise ;
   border-radius: 0px 50px 50px 0px;

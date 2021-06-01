@@ -8,7 +8,7 @@ const DashboardTiles = () => {
     const {currentUser} = useSelector(state => state.currentUserState)
 
     return (
-        <div className="win-tiles">
+        <div className="dash-tiles win-tiles">
             {currentUser && <DashboardSummaryTile />}
             {currentUser && <DashboardGroupsTile />}
             {/* more tiles tbd */} 

@@ -11,13 +11,13 @@ import DashboardTiles from './Tiles/DashboardTiles'
 import './Dashboard.css'
 //--------------------------------------- dashboard layout ---------------------------------------//
 const DashboardLayout = () => {
-    const {loading} = useSelector(state => state.currentUserState)
+    const {loading, currentUser} = useSelector(state => state.currentUserState)
 
     return (
         <>
             < Logo />
             < Groupley />
-            { loading ?
+            { currentUser === null && loading ?
                 <Loading />
                 :
                 <div className="window" >

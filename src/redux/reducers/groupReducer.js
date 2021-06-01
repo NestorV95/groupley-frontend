@@ -3,7 +3,8 @@ const initialState = {
     groups:null,
     error: null,
     selectedStatus: false,
-    selectedGroup: {}
+    selectedGroup: {},
+    membershipStatus: null,
 }
 
 const groupReducer = (state=initialState, action)=>{
@@ -19,25 +20,7 @@ const groupReducer = (state=initialState, action)=>{
                 ...state,
                 selectedStatus: action.status
             }
-        // case 'FETCH_GROUPS_REQUEST':
-        //     return{
-        //         ...state,
-        //         loading: true
-        //     }  
-        // case 'FETCH_GROUPS_SUCCESS':
-        //     return{
-        //         ...state,
-        //         loading: false,
-        //         groups: action.groups,
-        //         error: ""
-        //     }  
-        // case 'FETCH_GROUPS_FAILURE':
-        //         return{
-        //             ...state,
-        //             loading: false,
-        //             groups: null,
-        //             error: action.error
-        //     }
+
         case 'FETCH_GROUP_REQUEST':
                 return{
                     ...state,
@@ -62,6 +45,18 @@ const groupReducer = (state=initialState, action)=>{
                 ...state,
                 selectedGroup: action.group
             }
+        
+        // case 'JOIN_GROUP':
+        //     return{
+        //         ...state,
+        //         groups: [...state.groups, action.group]
+        //     }
+        // case 'LEAVE_GROUP':
+        //     return{
+        //         ...state,
+        //         groups: state.groups.filter(group=> group.id !== selectedGroup.id)
+        //     }
+        
         default: 
             return state 
     }
