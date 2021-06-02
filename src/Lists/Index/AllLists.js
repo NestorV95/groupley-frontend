@@ -7,7 +7,7 @@ const AllLists = () => {
     const {lists} = useSelector((state) => state.listsState);
     
     return (
-        <div className="index-inner index-mid">
+      <div className="index-inner index-mid">
         <ul className="mid-inner">
           {lists &&
             lists.map((list) => {

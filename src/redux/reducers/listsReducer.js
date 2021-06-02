@@ -93,6 +93,18 @@ const listsReducer = (state=initialState, action)=>{
                 error: "",
                 selectedList: null
             }
+
+        case 'UPDATE_LIST_ITEM':
+            const newItems = state.selectedList.list_items.map(item => item.id === action.item.id ? action.item : item)
+            
+            console.log(newItems)
+            return{
+                ...state,
+                selectedList: {
+                    ...state.selectedList,
+                    list_items: newItems
+                }
+            }
         
         default: 
             return state 

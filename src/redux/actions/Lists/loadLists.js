@@ -1,6 +1,7 @@
 import { fetchListsRequest,fetchListsSuccess,fetchListsFailure} from './fetchLists'
 
 const loadLists = (group) => async (dispatch) => {
+    dispatch(fetchListsRequest())
     const req={
         method: 'GET',
         headers: {
@@ -13,8 +14,7 @@ const loadLists = (group) => async (dispatch) => {
     await fetch(`http://localhost:3000/api/v1/groups/${group.id}/lists`, req)
     .then(res=>res.json())
     .then(data=>{
-        console.log(data)
-        dispatch(fetchListsRequest())
+        
         dispatch(fetchListsSuccess(data))
     })
     .catch(error=>{

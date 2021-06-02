@@ -1,9 +1,9 @@
 import React from 'react'
-import ListItem from './ListItem'
+import ListItem from './Item/ListItem'
 
 const ListItems = ({items})=>{
     return(
-       <ul>
+       <ul className="list-text bot-items">
             {items && items.map(item=>{
                return <ListItem key={item.id} item={item} />
             })}
