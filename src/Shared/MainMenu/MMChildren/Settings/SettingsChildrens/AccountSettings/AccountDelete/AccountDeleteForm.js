@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import { useDispatch} from 'react-redux'
+import React,{ useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { Redirect } from 'react-router'
 
 import deleteUser from '../../../../../../../redux/actions/currentUser/deleteUser'

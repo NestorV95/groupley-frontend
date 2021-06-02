@@ -36,14 +36,13 @@ const SignUpForm = () => {
     return (
         <div className="suf-div">
             {/* error handling on form */}
-            {/* on valid redirects to dashboard */}
             <p className="suf-text suf-title">Sign Up</p>
             <input className="suf-text suf-input" value={firstName} onChange={(e)=>setFirstName(e.target.value)} placeholder='first name' />
             <input className="suf-text suf-input" value={lastName} onChange={(e)=>setLastName(e.target.value)} placeholder='last name' />
             <input className="suf-text suf-input" value={username} onChange={(e)=>setUsername(e.target.value)} placeholder='username' />
-            <input className="suf-text suf-input" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='email' />
-            <input className="suf-text suf-input" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='password' /> 
-            <input className="suf-text suf-input" value={passwordConfirmation} onChange={(e)=>setPasswordConfirmation(e.target.value)} placeholder='password confirmation' />
+            <input className="suf-text suf-input" type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='email' />
+            <input className="suf-text suf-input" type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='password' /> 
+            <input className="suf-text suf-input" type="password" value={passwordConfirmation} onChange={(e)=>setPasswordConfirmation(e.target.value)} placeholder='password confirmation' />
             <button className="suf-text suf-button" onClick={()=>HandleSubmit()}>sign up</button>
 
         </div>

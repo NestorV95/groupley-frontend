@@ -23,9 +23,15 @@ const currentUserReducer = (state=initialState, action)=>{
             return{ 
                 ...state,
                 loading: false,
-                currentUser: {},
+                currentUser: null,
                 error: action.error 
             } 
+            
+        case 'CLEAR_USER':
+            return{
+                ...state,
+                currentUser: null
+            }
         default: 
             return state 
     }

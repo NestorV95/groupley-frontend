@@ -60,6 +60,10 @@
 }
 
 .set-input{
+    outline: none;
+    border: none; 
+    border-bottom:1px solid #ffffff;
+    background: transparent;
     margin: 0 .35rem .35rem 0;
     height: 1.5rem;
     width: 8rem;

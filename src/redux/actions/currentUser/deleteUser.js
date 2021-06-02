@@ -10,7 +10,12 @@ const deleteUser = () => async (dispatch) => {
         }
     }
     await fetch('http://localhost:3000/api/v1/terminate',req)
-    .then(dispatch(authStatus(false)))   
+    .then(()=>{
+        dispatch(authStatus(false))
+        localStorage.clear()
+        dispatch({type:'CLEAR_USER'})
+    })
+
 }
 
 export default deleteUser

@@ -30,8 +30,8 @@ const AccountEditPasswordForm = ({toggle}) => {
 
         <div>
             {error !== ''? <p className="set-text" >{error}</p> : null}
-            <input className="set-text set-input" value={ password } onChange={ e => setPassword( e.target.value ) } placeholder='Password' />
-            <input className="set-text set-input" value={ passwordConfirmation } onChange={ e => setPasswordConfirmation( e.target.value ) } placeholder='Confirmation' /> <br/>
+            <input className="set-text set-input" type="password" value={ password } onChange={ e => setPassword( e.target.value ) } placeholder='Password' />
+            <input className="set-text set-input" type="password" value={ passwordConfirmation } onChange={ e => setPasswordConfirmation( e.target.value ) } placeholder='Confirmation' /> <br/>
             <button className="set-text set-btn set-ibtn" onClick={ () => updatePassword() } >Update</button>
             <button className="set-text set-btn set-ibtn" onClick={ () => toggle() } >Cancel</button>      
         </div>
