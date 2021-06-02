@@ -26,28 +26,30 @@ const LogInForm = () => {
         }
     }
 
-    const HandleSubmit = () => {
+    const HandleSubmit = e => {
+        e.preventDefault()
         const log = { 
             username: username, 
             password: password 
         }
-        if(password !== '' && username !== ''){ dispatch( logInUser( log ) ) }
-        validateLogin()
+        if(password !== '' && username !== ''){ 
+            dispatch( logInUser( log ) ) 
+            validateLogin()
+        }
+        
     }
 
     return(
-       
-        <div className="lif-div">
+        <form className="lif-div" onSubmit={ e => HandleSubmit(e) } >
             <p className="lif-text lif-title">Login</p>
             { error !== "" ? <p className="lif-text lif-or" >{error}</p> : null }
-            <input className="lif-text lif-input" value={username} onChange={(e)=>setUsername(e.target.value)} placeholder='Username'/> <br/>
-            <input className="lif-text lif-input"  type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='Password'/> <br/> 
-            <button className="lif-text lif-button" onClick={()=>HandleSubmit()}>Log In</button>
+            <input required className="lif-text lif-input" type="text" value={username} onChange={(e)=>setUsername(e.target.value)} placeholder='Username'/> <br/>
+            <input required className="lif-text lif-input"  type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder='Password'/> <br/> 
+            <button className="lif-text lif-button" type="submit" >Log In</button>
             <p className="lif-text lif-or">or</p>
-            <button className="lif-text lif-button" onClick={()=>setSignUp(true)}>Sign Up</button>
+            <button className="lif-text lif-button" onClick={ () => setSignUp( true ) }>Sign Up</button>
             { signUp ? <Redirect to="/signup"/> : null }
-        </div>
-     
+        </form>
     )
 }
 

@@ -14,7 +14,7 @@ const logInUser = ( log ) => async (dispatch) => {
     .then( data => {
         dispatch( fetchUserSuccess( data.user ) )
         localStorage.setItem( 'token' , data.jwt )
-        if ( data.jwt !== undefined ){ dispatch( auth( true ) ) }
+        // if ( data.jwt !== undefined ){ dispatch( auth( true ) ) }
         data.jwt !== undefined? dispatch( auth( true ) ) : localStorage.clear()
     })
     .catch( error => {
