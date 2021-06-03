@@ -2,8 +2,6 @@ import {fetchUserRequest, fetchUserSuccess, fetchUserFailure} from './fetchUser'
 
 const UpdateUser = (log) => async (dispatch) =>{
 
-    const updatedUser = log
-
     dispatch(fetchUserRequest())
 
     const req={
@@ -13,7 +11,7 @@ const UpdateUser = (log) => async (dispatch) =>{
             'Accept':'application/json',
             'Authorization': `Bearer ${localStorage.getItem("token")}`
         },
-        body: JSON.stringify({user: updatedUser})
+        body: JSON.stringify({user: log})
     }
     
     fetch('http://localhost:3000/api/v1/update',req)

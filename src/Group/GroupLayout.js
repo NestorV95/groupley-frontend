@@ -1,5 +1,5 @@
-import React from 'react'//, {useEffect}
-import {useSelector} from 'react-redux' //useDispatch, 
+import React from 'react'// , {useEffect}
+import { useSelector} from 'react-redux' //useDispatch,
 
 // import loadGroup from '../redux/actions/groups/selectedGroup/loadGroup'
 
@@ -14,12 +14,15 @@ import './Group.css'
 const GroupLayout = (props) => {
     // const dispatch = useDispatch()
     const {loading, currentUser} = useSelector(state => state.currentUserState)
+    // const {groups} = useSelector(state => state.groupState)
     // const code = props.location.pathname.split("/")[2]
 
     // useEffect(()=>{
-    //     dispatch(loadGroup(code))
+    //     const select = groups.find(group=> group.code === code)
+    //     console.log(select)
+    //     dispatch(loadGroup(select))
     //     // eslint-disable-next-line
-    // },[code])
+    // },[select])
 
     return (
         <>

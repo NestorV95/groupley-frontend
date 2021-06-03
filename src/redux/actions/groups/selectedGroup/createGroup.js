@@ -1,7 +1,8 @@
 import {fetchGroupRequest, fetchGroupSuccess, fetchGroupFailure} from './fetchGroup'
 import joinGroup from './JoinGroup'
 
-const createGroup = log => async (dispatch) => {
+const createGroup = log => async (dispatch,getState) => {
+    const {currentUser} = getState().currentUserState
     dispatch(fetchGroupRequest())
 
     const req={
@@ -18,9 +19,15 @@ const createGroup = log => async (dispatch) => {
     await fetch('http://localhost:3000/api/v1/groups', req )
     .then(res=>res.json())
     .then(({group})=>{
-        
-        dispatch(fetchGroupSuccess(group))
-        dispatch(joinGroup(group))
+        const newGroup = {
+            ...group,
+            users:[currentUser]
+        }
+        dispatch(fetchGroupSuccess(newGroup))
+        dispatch(joinGroup(newGroup))
+    })
+    .catch(error=>{
+        dispatch(fetchGroupFailure(error.message))
     })
 
 }

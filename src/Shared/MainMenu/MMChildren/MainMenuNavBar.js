@@ -1,20 +1,27 @@
 //------------------------------------------- packages -------------------------------------------//
 import React, {useState} from "react";
-import {useSelector} from "react-redux"
+import { useSelector} from "react-redux" // useDispatch, 
 import {Link} from "react-router-dom"
+// import loadGroup from "../../../redux/actions/groups/selectedGroup/loadGroup";
 //------------------------------------------ components ------------------------------------------//
 
 //-------------------------------------------- styles --------------------------------------------//
 
 //----------------------------------------- sign up form -----------------------------------------//
 const MainMenuNavBar = () => {
-  const {groups} = useSelector(state => state.groupState)
+  const {groups, selectedGroup} = useSelector(state => state.groupState)
+  // const dispatch = useDispatch()
   const [party, setParty] = useState(false)
 
 
   const toggleGroups = () => {
     setParty(!party)
   }
+
+  // const getGroup = group => {
+  //   dispatch(loadGroup(group))
+  // }
+
   return (
     <div className="mm-nav">
       <ul className="mm-nul">
@@ -27,19 +34,15 @@ const MainMenuNavBar = () => {
         <li className="mm-nli">
           <Link className="mm-na" to="/messages"> Messages </Link>
         </li> */}
-        <li className="mm-nli" onClick={ () => toggleGroups() }>
+        <li className="mm-nli" onClick={ () => toggleGroups() } style={party? { boxShadow: 'inset 0 0 10px #9e9ed14d'}: null}>
           <span className="mm-na">Groups</span>
         </li>
         { party  ? 
           <>
             {groups.length > 0? 
-              groups.map(group =>{
-                return (
-                  <li className="mm-nli" >
-                    <Link className="mm-na" key={group.id} to={`/groups/${group.code}`}>{group.name}</Link>
-                  </li>
-                )
-              })
+              <li className="mm-nli" >
+                <Link className="mm-na" to={`/groups/${selectedGroup.code}`}>{selectedGroup.name}</Link>
+              </li>
               :
               null
             }
@@ -48,7 +51,7 @@ const MainMenuNavBar = () => {
               <Link className="mm-na" to="/create-group">Create</Link>
             </li>
             <li className="mm-nli" >
-              <Link className="mm-na" to="/create-search">Search</Link>
+              <Link className="mm-na" to="/search-group">Search</Link>
             </li>
 
           </>  
