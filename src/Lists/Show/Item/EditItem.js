@@ -1,24 +1,36 @@
 import React, { useState } from "react";
+import { useDispatch } from 'react-redux';
 import { FaUpload, FaTimes } from "react-icons/fa";
 
-const EditItem = ({content, toggle }) => {
-  const [input, setInput] = useState(content);
+import {editListItem} from '../../../redux/actions/ListItem/updateListItem'
+
+const EditItem = ({item , toggle }) => {
+  const dispatch = useDispatch()
+  const [input, setInput] = useState(item.content);
 
   const handleUpdate = () => {
-    console.log("update", content, input);
+    const info = {
+      ...item,
+      content: input
+    }
+    dispatch( editListItem( info ) )
+    toggle()
   };
 
   return (
-    <>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      >
-        <FaUpload onClick={() => handleUpdate()} />
-        <FaTimes onClick={() => toggle()} />
-      </input>
-    </>
+    <div>
+      <p>
+        <span>
+          <textarea className="list-text list-tb" value={input} onChange={(e) => setInput(e.target.value)} />
+        </span>
+        <span>  
+          <FaUpload className="list-icon" onClick={ () => handleUpdate() } />
+        </span>
+        <span>
+          <FaTimes className="list-icon" onClick={ () => toggle() } />
+        </span>
+      </p>
+    </div>
   );
 };
 

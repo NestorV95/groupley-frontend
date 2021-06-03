@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import CreateList from '../Create/CreateList'
 import ListTitle from './ListTitle'
 import ListItems from './ListItems'
+import CreateItem from './Item/CreateItem'
 
 const ListView = () =>{ 
     const {selectedList} = useSelector( state => state.listsState)
@@ -21,7 +22,10 @@ const ListView = () =>{
 
             <div className="view-bot">
                 {selectedList !== null ?
-                    <ListItems items={selectedList['list_items']}/> 
+                    <>
+                        <ListItems items={selectedList['list_items']}/> 
+                        <CreateItem />
+                    </>
                     : 
                     null 
                 }
