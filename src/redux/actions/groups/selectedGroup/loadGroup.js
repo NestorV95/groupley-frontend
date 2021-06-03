@@ -19,6 +19,7 @@ const loadGroup = (group) => async (dispatch) => {
     .then(({group})=>{
         const {id, image, name, code, users} = group
         const loadedGroup={
+            // selected: true,
             id: id,
             image: image,
             name: name,

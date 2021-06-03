@@ -83,9 +83,7 @@ const listsReducer = (state=initialState, action)=>{
             }
         
         case 'REMOVE_LIST':
-            console.log("3rd", state.lists, action.list)
             const newLists = state.lists.filter(eList=> eList.id !== action.list.id)
-            console.log("4th", newLists)
             return{
                 ...state,
                 loading: false,
@@ -95,14 +93,24 @@ const listsReducer = (state=initialState, action)=>{
             }
 
         case 'UPDATE_LIST_ITEM':
-            const newItems = state.selectedList.list_items.map(item => item.id === action.item.id ? action.item : item)
+            const updatedItems = state.selectedList.list_items.map(item => item.id === action.item.id ? action.item : item)
             
-            console.log(newItems)
             return{
                 ...state,
                 selectedList: {
                     ...state.selectedList,
-                    list_items: newItems
+                    list_items: updatedItems
+                }
+            }
+
+        case 'REMOVE_LIST_ITEM':
+            const removedItems = state.selectedList.list_items.filter(item=> item.id !== action.list_item.id )
+
+            return{
+                ...state,
+                selectedList: {
+                    ...state.selectedList,
+                    list_items: removedItems
                 }
             }
         

@@ -8,6 +8,7 @@ import ListsLayout from "../Lists/ListsLayout"
 import LoginLayout from "../LogIn/LoginLayout"
 import SignUpLayout from "../SignUp/SignUpLayout"
 import GroupLayout from "../Group/GroupLayout"
+import GroupCreateLayout from "../Group/CreateLayout/GroupCreateLayout"
 //-------------------------------------------- styles --------------------------------------------//
 
 //-------------------------------------------- routes  -------------------------------------------//
@@ -19,7 +20,9 @@ const Routes = props => {
                 <Route exact path='/' component={HomeLayout} /> 
                 <Route exact path='/calander' component={CalanderLayout}/>
                 <Route exact path='/dashboard' component={DashboardLayout} />
-                <Route exact path='/groups' component={GroupLayout} />
+                <Route exact path='/groups/:groupCode' component={GroupLayout} />
+                <Route exact path='/create-group' component={GroupCreateLayout} />
+                <Route exact path='/search-group' component={GroupLayout} />
                 <Route exact path='/lists' component={ListsLayout} />
                 <Route exact path='/login' component={LoginLayout} />
                 <Route exact path='/signup' component={SignUpLayout} />

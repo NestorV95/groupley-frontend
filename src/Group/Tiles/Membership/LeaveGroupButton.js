@@ -12,7 +12,7 @@ const LeaveGroupButton = () => {
     }
 
     return (
-        <button className="group-text group-btn" onClick={()=>leave()}>leave group</button>
+        <button className="group-text group-btn mem-btn" onClick={()=>leave()}>leave group</button>
     )
 }
 

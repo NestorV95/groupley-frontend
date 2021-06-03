@@ -1,5 +1,6 @@
 const initialState = {
     loading: null,
+    allGroups: null,
     groups:null,
     error: null,
     selectedStatus: false,
@@ -44,6 +45,12 @@ const groupReducer = (state=initialState, action)=>{
             return{
                 ...state,
                 selectedGroup: action.group
+            }
+
+        case 'ADD_GROUP':
+            return{
+                ...state,
+                groups: [...state.groups, action.group]
             }
         
         // case 'JOIN_GROUP':

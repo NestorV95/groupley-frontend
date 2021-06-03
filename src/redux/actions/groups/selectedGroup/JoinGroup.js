@@ -1,16 +1,20 @@
 // import {fetchGroupfetchGroupFailure} from './fetchGroup'
 
-const joinGroup = () => async (dispatch, getState) => {
+const addGroup = (group) => {
+    return{
+        type: 'ADD_GROUP',
+        group: group
+    }
+}
+
+const joinGroup = (group) => async (dispatch, getState) => {
     const state = getState()
     const {currentUser} = state.currentUserState
-    const {selectedGroup} = state.groupState
 
     const newMem = {
-        group_id: selectedGroup.id,
+        group_id: group.id,
         user_id: currentUser.id
     }
-
-    console.log(newMem)
 
     const req={
         method: 'POST',
@@ -22,16 +26,13 @@ const joinGroup = () => async (dispatch, getState) => {
         body: JSON.stringify(newMem)
     }
 
-    console.log(req)
-
     await fetch('http://localhost:3000/api/v1/group_users', req )
     .then(res=>res.json())
-    .then((data)=>{
-        console.log(data)
+    .then(({group_user})=>{
+        const {group} = group_user
+        dispatch(addGroup(group))
     })
-    // .catch(error=>{
-    //     dispatch(fetchGroupFailure(error.message))
-    // })
+
 }
 
 export default joinGroup

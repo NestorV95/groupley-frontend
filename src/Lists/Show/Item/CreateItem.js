@@ -11,11 +11,10 @@ const CreateItem = () => {
     const handleCreate = () => {
         const info = {
             list: selectedList,
-            item: {
+            item: { 
                 list_id: selectedList.id,
                 content: input
-            }
-            
+            }  
         }
         dispatch( createListItem( info ) )
     }

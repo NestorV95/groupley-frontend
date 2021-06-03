@@ -1,6 +1,9 @@
 import React,{useEffect, useState} from 'react'
 import {useSelector} from 'react-redux'
 
+import JoinGroupButton from './JoinGroupButton'
+import LeaveGroupButton from './LeaveGroupButton'
+
 const GroupMemStatus = () => {
     const [status, setStatus] = useState(false)
     const {currentUser} = useSelector(state => state.currentUserState)
@@ -15,13 +18,20 @@ const GroupMemStatus = () => {
     }, [selectedGroup])
 
     return (
-        <p className="group-text">
+        <div className ="mem-inner">
             {status? 
-                'You are currently a member of this group' 
-                : 
-                'You are not a member of this group'
+                <>
+                    <p className="group-text" >You are currently a member of this group</p>
+                    <LeaveGroupButton /> 
+                </>
+                :
+                <>
+                    <p className="group-text" >You are not a member of this group</p>
+                    <JoinGroupButton />
+                </>
+                
             }
-        </p>
+        </div>
     )
 }
 

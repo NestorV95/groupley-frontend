@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { FaUpload, FaTimes } from "react-icons/fa";
+import { FaUpload, FaTrashAlt, FaTimes } from "react-icons/fa";
 
 import {editListItem} from '../../../redux/actions/ListItem/updateListItem'
+import deleteListItem from "../../../redux/actions/ListItem/deleteListItem";
 
 const EditItem = ({item , toggle }) => {
   const dispatch = useDispatch()
@@ -17,6 +18,10 @@ const EditItem = ({item , toggle }) => {
     toggle()
   };
 
+  const handleDelete = () => {
+    dispatch( deleteListItem( item ) )
+  }
+
   return (
     <div>
       <p>
@@ -25,6 +30,9 @@ const EditItem = ({item , toggle }) => {
         </span>
         <span>  
           <FaUpload className="list-icon" onClick={ () => handleUpdate() } />
+        </span>
+        <span>  
+          <FaTrashAlt className="list-icon" onClick={ () => handleDelete() } />
         </span>
         <span>
           <FaTimes className="list-icon" onClick={ () => toggle() } />

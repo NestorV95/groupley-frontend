@@ -1,6 +1,6 @@
-import {fetchGroupFailure} from './fetchGroup'
 
-const leaveGroup = () => async (dispatch, getState) => {
+
+const leaveGroup = () => async ( getState) => {
     const state = getState()
     const {groups} = state.currentUserState.currentUser
     const {selectedGroup} = state.groupState
@@ -19,9 +19,7 @@ const leaveGroup = () => async (dispatch, getState) => {
 
     await fetch(`http://localhost:3000/api/v1/group_users/${groupUser.id}`, req )
     .then(res=>res.json())
-    .catch(error=>{
-        dispatch(fetchGroupFailure(error.message))
-    })
+    
 }
 
 export default leaveGroup
