@@ -1,5 +1,6 @@
 import {fetchGroupRequest, fetchGroupSuccess, fetchGroupFailure} from './fetchGroup'
 import joinGroup from './JoinGroup'
+import addAllGroups from '../addAllGroups'
 
 const createGroup = log => async (dispatch,getState) => {
     const {currentUser} = getState().currentUserState
@@ -25,6 +26,7 @@ const createGroup = log => async (dispatch,getState) => {
         }
         dispatch(fetchGroupSuccess(newGroup))
         dispatch(joinGroup(newGroup))
+        dispatch(addAllGroups(newGroup))
     })
     .catch(error=>{
         dispatch(fetchGroupFailure(error.message))

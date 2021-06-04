@@ -5,6 +5,7 @@ import {useDispatch} from 'react-redux'
 import Routes from './Routes/Routes';
 import loadUser from './redux/actions/currentUser/loadUser'
 import {authenticated, authStatus} from './redux/actions/auth/authStatus'
+import allGroups from './redux/actions/groups/setAllGroups'
 //-------------------------------------------- styles --------------------------------------------//
 import './styles/App.css';
 //----------------------------------------- application ------------------------------------------//
@@ -15,6 +16,7 @@ const  App = props => {
   useEffect(() => {
     dispatch( authStatus()) 
     if (authenticated === true){ dispatch( loadUser() ) }
+    if (authenticated === true){ dispatch( allGroups() ) }
     // eslint-disable-next-line
   }, [])
 

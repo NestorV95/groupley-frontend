@@ -9,8 +9,7 @@ import SearchTiles from './SearchTiles.js'
 
 import '../Group.css'
 
-
-const GroupCreateLayout = () => {
+const GroupSearchLayout = () => {
     const {loading, currentUser} = useSelector(state => state.currentUserState)
 
     return (
@@ -29,4 +28,4 @@ const GroupCreateLayout = () => {
     )
 }
 
-export default GroupCreateLayout
+export default GroupSearchLayout

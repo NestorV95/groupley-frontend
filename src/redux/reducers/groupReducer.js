@@ -52,6 +52,18 @@ const groupReducer = (state=initialState, action)=>{
                 ...state,
                 groups: [...state.groups, action.group]
             }
+
+        case'SET_ALL_GROUPS':
+            return {
+                ...state,
+                allGroups: action.groups
+            }
+
+        case 'ADD_ALL_GROUPS':
+            return {
+                ...state,
+                allGroups: [...state.allGroups, action.group]
+            }
         
         // case 'JOIN_GROUP':
         //     return{
