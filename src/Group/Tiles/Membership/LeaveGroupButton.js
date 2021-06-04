@@ -1,14 +1,14 @@
 import React from 'react'
-import {useDispatch} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import leaveGroup from '../../../redux/actions/groups/selectedGroup/leaveGroup'
 
 
 const LeaveGroupButton = () => {
-
+    const {selectedGroup} = useSelector(state => state.groupState)
     const dispatch = useDispatch()
 
-    const leave = () => {
-        dispatch(leaveGroup())
+    const leave =() => {
+        dispatch(leaveGroup(selectedGroup))
     }
 
     return (

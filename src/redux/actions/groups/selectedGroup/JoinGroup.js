@@ -2,14 +2,14 @@
 
 import selectGroup from "./selectGroup"
 
-const addGroup = (group) => {
+export const addGroup = (group) => {
     return{
         type: 'ADD_GROUP',
         group: group
     }
 }
 
-const editGroups = group => {
+export const editGroups = group => {
     return{
         type: 'EDIT_GROUPS',
         group: group
