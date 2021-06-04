@@ -64,17 +64,13 @@ const groupReducer = (state=initialState, action)=>{
                 ...state,
                 allGroups: [...state.allGroups, action.group]
             }
-        
-        // case 'JOIN_GROUP':
-        //     return{
-        //         ...state,
-        //         groups: [...state.groups, action.group]
-        //     }
-        // case 'LEAVE_GROUP':
-        //     return{
-        //         ...state,
-        //         groups: state.groups.filter(group=> group.id !== selectedGroup.id)
-        //     }
+
+        case 'EDIT_GROUPS':
+            const editAllGroups = state.allGroups.map(group => group.id === action.group.id? action.group : group)
+            return {
+                ...state,
+                allGroups: editAllGroups
+            }
         
         default: 
             return state 

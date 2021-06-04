@@ -7,10 +7,9 @@ import LeaveGroupButton from './LeaveGroupButton'
 const GroupMemStatus = () => {
     const {currentUser} = useSelector(state => state.currentUserState)
     const {selectedGroup} = useSelector(state => state.groupState)
-
     return (
         <div className ="mem-inner">
-            {selectedGroup.users.includes(user=> user.id === currentUser.id)? 
+            {selectedGroup.users.find(user=> user.id === currentUser.id)? 
                 <>
                     <p className="group-text" >You are currently a member of this group</p>
                     <LeaveGroupButton /> 

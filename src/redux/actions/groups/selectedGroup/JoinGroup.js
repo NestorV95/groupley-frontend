@@ -1,8 +1,17 @@
 // import {fetchGroupfetchGroupFailure} from './fetchGroup'
 
+import selectGroup from "./selectGroup"
+
 const addGroup = (group) => {
     return{
         type: 'ADD_GROUP',
+        group: group
+    }
+}
+
+const editGroups = group => {
+    return{
+        type: 'EDIT_GROUPS',
         group: group
     }
 }
@@ -30,7 +39,11 @@ const joinGroup = (group) => async (dispatch, getState) => {
     .then(res=>res.json())
     .then(({group_user})=>{
         const {group} = group_user
+        console.log(group)
+        dispatch(editGroups(group))
         dispatch(addGroup(group))
+        dispatch(selectGroup(group))
+
     })
 
 }

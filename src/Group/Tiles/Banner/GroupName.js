@@ -10,7 +10,7 @@ const GroupName = () => {
     return (
         <div className="ban-top">
             <p className="group-text group-name">{selectedGroup.name}</p>
-            {selectedGroup.users.includes(user=> user.id === currentUser.id) ? 
+            {selectedGroup.users.find(user=> user.id === currentUser.id) ? 
                 < EditGroupName /> 
                 : 
                 null 
