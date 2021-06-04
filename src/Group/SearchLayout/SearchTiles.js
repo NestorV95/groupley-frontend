@@ -11,6 +11,7 @@ const SearchTiles = () => {
 
     useEffect(()=>{
         setResults(allGroups)
+        // eslint-disable-next-line
     },[])
 
     const handleSearch = value =>{

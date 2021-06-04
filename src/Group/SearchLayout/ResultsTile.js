@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Redirect } from 'react-router'
 
@@ -8,14 +8,6 @@ const ResultsTile = ({results}) => {
     const {selectedGroup} = useSelector(state => state.groupState)
     const [success, setSuccess] = useState(false)
     const dispatch = useDispatch()
-
-    // const [selection, setSelection] = useState({})
-
-    // useEffect(()=>{
-    //     if(selectedGroup.code === code){
-    //         setSuccess(true)
-    //     }
-    // },[selectedGroup,code])
 
     const handleSelection = group => {
         dispatch(selectGroup(group))
