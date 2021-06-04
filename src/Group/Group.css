@@ -199,6 +199,8 @@
     width: 100%;
     white-space: nowrap; 
     justify-content: center;
+    align-content: flex-start;
+    gap:.25rem;
     overflow: hidden;
     overflow-x: auto;
     list-style-type: none; 

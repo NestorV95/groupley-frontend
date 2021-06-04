@@ -14,6 +14,7 @@ import './Group.css'
 const GroupLayout = (props) => {
     // const dispatch = useDispatch()
     const {loading, currentUser} = useSelector(state => state.currentUserState)
+    const {selectedGroup} = useSelector(state => state.groupState)
     // const {groups} = useSelector(state => state.groupState)
     // const code = props.location.pathname.split("/")[2]
 
@@ -28,7 +29,7 @@ const GroupLayout = (props) => {
         <>
             <Logo />
             <Groupley />
-            { currentUser === null && loading?
+            { currentUser === null && selectedGroup === null && loading?
                 <Loading />
                 :
                 <div className="window">

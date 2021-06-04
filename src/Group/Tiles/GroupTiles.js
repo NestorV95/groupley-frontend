@@ -6,12 +6,12 @@ import GroupMembership from './Membership/GroupMembership'
 import GroupUsersList from './Users/GroupUsersList'
 
 const GroupTiles = () => {
-    const {selectedStatus} = useSelector(state => state.groupState)
+    const {selectedStatus, selectedGroup} = useSelector(state => state.groupState)
     return (
         <div className="win-tiles">
-            { selectedStatus ? < GroupBanner /> : null}
-            { selectedStatus ? < GroupMembership /> : null}
-            { selectedStatus ? < GroupUsersList /> : null }
+            { selectedGroup.name !== null && selectedStatus ? < GroupBanner /> : null}
+            { selectedGroup.users !== null && selectedStatus ? < GroupMembership /> : null}
+            { selectedGroup.users !== null && selectedStatus ? < GroupUsersList /> : null }
         </div>
     )
 }

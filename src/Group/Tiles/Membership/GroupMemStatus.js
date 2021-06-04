@@ -9,7 +9,8 @@ const GroupMemStatus = () => {
     const {selectedGroup} = useSelector(state => state.groupState)
     return (
         <div className ="mem-inner">
-            {selectedGroup.users.find(user=> user.id === currentUser.id)? 
+            {selectedGroup.users !== null && selectedGroup.users.length > 0 && 
+                selectedGroup.users.find(user=> user.id === currentUser.id)? 
                 <>
                     <p className="group-text" >You are currently a member of this group</p>
                     <LeaveGroupButton /> 

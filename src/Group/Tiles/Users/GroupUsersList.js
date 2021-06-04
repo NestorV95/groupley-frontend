@@ -12,7 +12,7 @@ const GroupUsersList = () => {
 
       <div className="users-outer">
         <ul className="users-inner">
-          {users &&
+          {users !== null && users.length > 0 &&
             users.map((user) => {
               return <GroupUserTile key={user.username} user={user} />;
             })}
