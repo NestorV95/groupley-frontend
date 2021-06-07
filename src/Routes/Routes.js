@@ -10,6 +10,7 @@ import SignUpLayout from "../SignUp/SignUpLayout"
 import GroupLayout from "../Group/GroupLayout"
 import GroupCreateLayout from "../Group/CreateLayout/GroupCreateLayout"
 import GroupSearchLayout from "../Group/SearchLayout/GroupSearchLayout"
+import UnauthorizedLayout from "../Unauthorized/UnauthorizedLayout"
 //-------------------------------------------- styles --------------------------------------------//
 
 //-------------------------------------------- routes  -------------------------------------------//
@@ -27,6 +28,7 @@ const Routes = props => {
                 <Route exact path='/lists' component={ListsLayout} />
                 <Route exact path='/login' component={LoginLayout} />
                 <Route exact path='/signup' component={SignUpLayout} />
+                <Route exact path= '/unauthorized' component={UnauthorizedLayout} />
             </Switch>
         </Router>
     )
